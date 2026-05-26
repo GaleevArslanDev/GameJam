@@ -1,0 +1,23 @@
+﻿/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Uu]serSettings/
+
+# Asset Meta files should NOT be ignored (Unity needs them)
+!/[Aa]ssets/**/*.meta
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files (Visual Studio / Rider)
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.unityproj
