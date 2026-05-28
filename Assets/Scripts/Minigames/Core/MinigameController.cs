@@ -75,12 +75,11 @@ namespace Minigames.Core
                 SwitchToMinigameCamera();
 
                 currentGame.gameObject.SetActive(true);
-
-                currentGame.StartGame();
-
-                currentGame.OnMinigameFinished +=
-                    FinishCurrentGame;
             });
+            currentGame.StartGame();
+
+            currentGame.OnMinigameFinished +=
+                FinishCurrentGame;
         }
 
         private void FinishCurrentGame(bool success)

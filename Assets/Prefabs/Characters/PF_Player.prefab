@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 4153243921230948031}
   - component: {fileID: 6672764329720059313}
   - component: {fileID: 8437097857322035023}
+  - component: {fileID: 2428737207285582723}
   m_Layer: 0
   m_Name: PF_Player
   m_TagString: Player
@@ -454,6 +455,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Minigames.Reaction.ReactionInput
   seller: {fileID: 0}
+--- !u!114 &2428737207285582723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025426938689194158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31cb2e84aafe4894be6349e1fb713300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Minigames.Rhythm.RhythmPlayerMover
+  forwardTile: {fileID: 0}
+  backwardTile: {fileID: 0}
+  leftTile: {fileID: 0}
+  rightTile: {fileID: 0}
+  currentTile: {fileID: 0}
+  moveSpeed: 14
+  centerPoint: {fileID: 0}
 --- !u!1 &2131982180233439668
 GameObject:
   m_ObjectHideFlags: 0
