@@ -11,28 +11,20 @@ namespace Minigames.Throwing
         [SerializeField]
         private float maxDistance = 5f;
 
-        private bool canControl;
         private Vector3 startPosition;
-        private bool hasStartPoint;
 
-        public void EnableControl()
+        private void Awake()
         {
-            canControl = true;
-            startPosition = transform.position;
-            hasStartPoint = true;
+            enabled = false;
         }
 
-        public void DisableControl()
+        private void OnEnable()
         {
-            canControl = false;
-            hasStartPoint = false;
+            startPosition = transform.position;
         }
 
         private void Update()
         {
-            if (!canControl || !hasStartPoint)
-                return;
-
             float input = 0f;
 
             if (Keyboard.current.aKey.isPressed)
@@ -52,13 +44,12 @@ namespace Minigames.Throwing
                 moveSpeed *
                 Time.deltaTime;
 
-            float clampedX = Mathf.Clamp(
+            pos.x = Mathf.Clamp(
                 pos.x,
                 startPosition.x - maxDistance,
                 startPosition.x + maxDistance
             );
 
-            pos.x = clampedX;
             transform.position = pos;
         }
     }
