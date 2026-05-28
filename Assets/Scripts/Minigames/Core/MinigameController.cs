@@ -25,10 +25,6 @@ namespace Minigames.Core
         [SerializeField]
         private CinemachineCamera minigameCamera;
 
-        [Header("Minigame Systems")]
-        [SerializeField]
-        private MonoBehaviour[] minigameSystems;
-
         private Vector3 savedPosition;
         private Quaternion savedRotation;
 
@@ -71,6 +67,9 @@ namespace Minigames.Core
 
                 TeleportPlayer(game.PlayerPoint);
 
+                minigameCamera.LookAt = game.LookAtPoint;
+                minigameCamera.Follow = game.LookAtPoint;
+
                 EnableMinigameSystems();
 
                 SwitchToMinigameCamera();
@@ -93,25 +92,31 @@ namespace Minigames.Core
 
         private IEnumerator FinishRoutine(bool success)
         {
-            currentGame.OnMinigameFinished -= 
+            currentGame.OnMinigameFinished -=
                 FinishCurrentGame;
-            
+
             currentGame.StopGame();
-                
+
+            Minigames.UI.MinigameResultUI
+                .Instance.Show(success);
+            
             DisableMinigameSystems();
-            
+
             RestorePlayerState();
-                
+
             currentSeller.ShowSeller();
-            
+
             SwitchToFPSCamera();
-                
+
             EnableFPSController();
-            
-            currentGame = null; 
+
+            currentGame = null;
             currentSeller = null;
 
-            yield return null;
+            yield return new WaitForSeconds(2f);
+
+            Minigames.UI.MinigameResultUI
+                .Instance.Hide();
         }
 
         private void SavePlayerState()
@@ -154,18 +159,26 @@ namespace Minigames.Core
 
         private void EnableMinigameSystems()
         {
-            foreach (MonoBehaviour system in minigameSystems)
+            foreach (
+                MonoBehaviour system
+                in currentGame.GameplaySystems
+            )
             {
                 system.enabled = true;
             }
 
-            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.lockState =
+                CursorLockMode.Locked;
+
             Cursor.visible = false;
         }
 
         private void DisableMinigameSystems()
         {
-            foreach (MonoBehaviour system in minigameSystems)
+            foreach (
+                MonoBehaviour system
+                in currentGame.GameplaySystems
+            )
             {
                 system.enabled = false;
             }

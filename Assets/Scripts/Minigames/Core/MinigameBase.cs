@@ -12,7 +12,14 @@ namespace Minigames.Core
 
         [SerializeField] protected GameObject minigameRoot;
 
+        [SerializeField] protected Transform lookAtPoint;
+        
+        [SerializeField]
+        protected MonoBehaviour[] gameplaySystems;
+
+        public MonoBehaviour[] GameplaySystems => gameplaySystems;
         public Transform PlayerPoint => playerPoint;
+        public Transform LookAtPoint => lookAtPoint;
 
         public virtual void StartGame()
         {
