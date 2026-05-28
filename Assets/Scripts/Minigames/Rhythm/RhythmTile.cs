@@ -77,6 +77,8 @@ namespace Minigames.Rhythm
             if (blinkRoutine != null)
             {
                 StopCoroutine(blinkRoutine);
+
+                blinkRoutine = null;
             }
 
             IsTarget = false;

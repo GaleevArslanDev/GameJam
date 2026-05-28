@@ -43,6 +43,16 @@ namespace Minigames.Throwing
         public override void StopGame()
         {
             base.StopGame();
+            
+            Projectile[] projectiles =
+                FindObjectsByType<Projectile>(
+                    FindObjectsSortMode.None
+                );
+
+            foreach (Projectile projectile in projectiles)
+            {
+                Destroy(projectile.gameObject);
+            }
 
             active = false;
         }

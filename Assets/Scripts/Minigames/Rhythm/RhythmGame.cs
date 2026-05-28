@@ -43,9 +43,22 @@ namespace Minigames.Rhythm
         {
             base.StartGame();
 
+            CancelInvoke();
+
             currentRound = 0;
 
             active = true;
+            inputEnabled = false;
+            roundResolved = false;
+
+            timer = 0f;
+
+            currentTarget = null;
+
+            foreach (RhythmTile tile in tiles)
+            {
+                tile.SetIdle();
+            }
 
             StartRound();
         }

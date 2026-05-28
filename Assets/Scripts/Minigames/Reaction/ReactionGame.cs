@@ -36,7 +36,7 @@ namespace Minigames.Reaction
 
         private int currentRound;
 
-        private bool active;
+        [SerializeField]private bool active;
 
         public ReactionZone Zone => reactionZone;
 
@@ -61,6 +61,8 @@ namespace Minigames.Reaction
             base.StopGame();
 
             active = false;
+
+            CancelInvoke();
         }
 
         public void CheckHit()

@@ -154,6 +154,18 @@ namespace Minigames.Rhythm
                 }
             }
         }
+        
+        private void OnEnable()
+        {
+            moving = false;
+
+            targetTile = null;
+
+            if (returnRoutine != null)
+            {
+                StopCoroutine(returnRoutine);
+            }
+        }
 
         private IEnumerator ReturnToCenterRoutine()
         {

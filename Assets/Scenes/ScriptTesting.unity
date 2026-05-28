@@ -6881,6 +6881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Minigames.Core.SellerNPC
   minigames:
   - {fileID: 1566083516}
+  - {fileID: 1109798889}
+  - {fileID: 968803397}
   patrolPoints:
   - {fileID: 1813880333}
   - {fileID: 1416093561}

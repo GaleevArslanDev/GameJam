@@ -19,6 +19,7 @@ namespace Minigames.Reaction
         private float fadeDuration = 1f;
 
         private ParticleSystem.EmissionModule emission;
+        private Coroutine moveRoutine;
 
         public bool SellerInside { get; private set; }
 
@@ -33,13 +34,19 @@ namespace Minigames.Reaction
             float particlesWidth
         )
         {
-            StartCoroutine(
-                MoveRoutine(
-                    x,
-                    width,
-                    particlesWidth
-                )
-            );
+            if (moveRoutine != null)
+            {
+                StopCoroutine(moveRoutine);
+            }
+
+            moveRoutine =
+                StartCoroutine(
+                    MoveRoutine(
+                        x,
+                        width,
+                        particlesWidth
+                    )
+                );
         }
 
         private IEnumerator MoveRoutine(
