@@ -1,43 +1,39 @@
-﻿using UnityEngine;
+﻿using Minigames.UI;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Minigames.Throwing
 {
     public class ProjectileThrower : MonoBehaviour
     {
-        [SerializeField] private GameObject projectilePrefab;
+        [SerializeField]
+        private GameObject projectilePrefab;
 
-        [SerializeField] private Transform shootPoint;
+        [SerializeField]
+        private Transform shootPoint;
 
-        [SerializeField] private float throwForce = 20f;
+        [SerializeField]
+        private float throwForce = 20f;
 
-        [SerializeField] private int maxAmmo = 10;
+        [SerializeField]
+        private int maxAmmo = 15;
 
         private int currentAmmo;
 
-        private bool canThrow;
-
         private void Awake()
         {
-            currentAmmo = maxAmmo;
+            enabled = false;
         }
 
-        public void EnableThrowing()
+        private void OnEnable()
         {
-            canThrow = true;
             currentAmmo = maxAmmo;
-        }
 
-        public void DisableThrowing()
-        {
-            canThrow = false;
+            UpdateUI();
         }
 
         private void Update()
         {
-            if (!canThrow)
-                return;
-
             if (
                 Mouse.current.leftButton
                 .wasPressedThisFrame
@@ -51,13 +47,14 @@ namespace Minigames.Throwing
         {
             if (currentAmmo <= 0)
             {
-                FindObjectOfType<ThrowingGame>()
-                    .LoseGame();
+                ThrowingGame.Instance.LoseGame();
 
                 return;
             }
 
             currentAmmo--;
+
+            UpdateUI();
 
             GameObject projectile =
                 Instantiate(
@@ -72,6 +69,14 @@ namespace Minigames.Throwing
             rb.AddForce(
                 shootPoint.forward * throwForce,
                 ForceMode.Impulse
+            );
+        }
+
+        private void UpdateUI()
+        {
+            ThrowingGameUI.Instance.UpdateAmmo(
+                currentAmmo,
+                maxAmmo
             );
         }
     }

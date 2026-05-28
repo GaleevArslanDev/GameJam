@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using Player;
-using Minigames.Throwing;
 using Unity.Cinemachine;
 
 namespace Minigames.Core
@@ -15,63 +15,103 @@ namespace Minigames.Core
         [SerializeField] private PlayerMotor playerMotor;
         [SerializeField] private PlayerLook playerLook;
 
-        [SerializeField] private CharacterController characterController;
+        [SerializeField]
+        private CharacterController characterController;
 
         [Header("Cameras")]
-        [SerializeField] private CinemachineCamera fpsCamera;
-        [SerializeField] private CinemachineCamera minigameCamera;
+        [SerializeField]
+        private CinemachineCamera fpsCamera;
 
-        [Header("Minigame")]
-        [SerializeField] private SideMoveController sideMoveController;
-        [SerializeField] private ProjectileThrower projectileThrower;
+        [SerializeField]
+        private CinemachineCamera minigameCamera;
+
+        [Header("Minigame Systems")]
+        [SerializeField]
+        private MonoBehaviour[] minigameSystems;
 
         private Vector3 savedPosition;
         private Quaternion savedRotation;
 
-        private ThrowingGame currentGame;
+        private MinigameBase currentGame;
+        private SellerNPC currentSeller;
 
         private void Awake()
         {
             Instance = this;
         }
 
-        public void StartThrowingGame(
-            ThrowingGame game,
-            Transform playerPoint
+        public void StartMinigame(
+            MinigameBase game,
+            SellerNPC seller
+        )
+        {
+            StartCoroutine(
+                StartMinigameRoutine(
+                    game,
+                    seller
+                )
+            );
+        }
+
+        private IEnumerator StartMinigameRoutine(
+            MinigameBase game,
+            SellerNPC seller
         )
         {
             currentGame = game;
+            currentSeller = seller;
 
-            SavePlayerState();
+            yield return SpinTransition.Instance.Play(() =>
+            {
+                SavePlayerState();
 
-            DisableFPSController();
+                DisableFPSController();
 
-            TeleportPlayer(playerPoint);
+                seller.HideSeller();
 
-            EnableMinigameSystems();
+                TeleportPlayer(game.PlayerPoint);
 
-            SwitchToMinigameCamera();
+                EnableMinigameSystems();
 
-            currentGame.BeginGame();
+                SwitchToMinigameCamera();
+
+                currentGame.gameObject.SetActive(true);
+
+                currentGame.StartGame();
+
+                currentGame.OnMinigameFinished +=
+                    FinishCurrentGame;
+            });
         }
 
-        public void FinishCurrentGame(bool success)
+        private void FinishCurrentGame(bool success)
         {
-            Debug.Log(
-                success
-                ? "MINIGAME WIN"
-                : "MINIGAME LOSE"
+            StartCoroutine(
+                FinishRoutine(success)
             );
+        }
 
+        private IEnumerator FinishRoutine(bool success)
+        {
+            currentGame.OnMinigameFinished -= 
+                FinishCurrentGame;
+            
+            currentGame.StopGame();
+                
             DisableMinigameSystems();
-
+            
             RestorePlayerState();
-
+                
+            currentSeller.ShowSeller();
+            
             SwitchToFPSCamera();
-
+                
             EnableFPSController();
+            
+            currentGame = null; 
+            currentSeller = null;
 
-            currentGame = null;
+            yield return null;
         }
 
         private void SavePlayerState()
@@ -114,8 +154,10 @@ namespace Minigames.Core
 
         private void EnableMinigameSystems()
         {
-            sideMoveController.EnableControl();
-            projectileThrower.EnableThrowing();
+            foreach (MonoBehaviour system in minigameSystems)
+            {
+                system.enabled = true;
+            }
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -123,8 +165,10 @@ namespace Minigames.Core
 
         private void DisableMinigameSystems()
         {
-            sideMoveController.DisableControl();
-            projectileThrower.DisableThrowing();
+            foreach (MonoBehaviour system in minigameSystems)
+            {
+                system.enabled = false;
+            }
         }
 
         private void SwitchToMinigameCamera()

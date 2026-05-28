@@ -7,14 +7,21 @@ namespace Minigames.Core
     {
         public event Action<bool> OnMinigameFinished;
 
+        [Header("Setup")]
+        [SerializeField] protected Transform playerPoint;
+
+        [SerializeField] protected GameObject minigameRoot;
+
+        public Transform PlayerPoint => playerPoint;
+
         public virtual void StartGame()
         {
-            gameObject.SetActive(true);
+            minigameRoot.SetActive(true);
         }
 
         public virtual void StopGame()
         {
-            gameObject.SetActive(false);
+            minigameRoot.SetActive(false);
         }
 
         protected void Finish(bool success)
