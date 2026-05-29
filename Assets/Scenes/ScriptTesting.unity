@@ -1042,7 +1042,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -6490,6 +6490,7 @@ MonoBehaviour:
   startZoneWidth: 1.7
   endZoneWidth: 0.4
   startParticlesRadius: 0.62
+  active: 0
 --- !u!4 &968803398
 Transform:
   m_ObjectHideFlags: 0
@@ -6880,9 +6881,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Minigames.Core.SellerNPC
   minigames:
-  - {fileID: 1566083516}
-  - {fileID: 1109798889}
   - {fileID: 968803397}
+  - {fileID: 1109798889}
+  - {fileID: 1566083516}
   patrolPoints:
   - {fileID: 1813880333}
   - {fileID: 1416093561}

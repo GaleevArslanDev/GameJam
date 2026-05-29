@@ -22,6 +22,7 @@ namespace Minigames.Reaction
         private Coroutine moveRoutine;
 
         public bool SellerInside { get; private set; }
+        public bool IsTransitioning { get; private set; }
 
         private void Awake()
         {
@@ -55,6 +56,10 @@ namespace Minigames.Reaction
             float particlesWidth
         )
         {
+            IsTransitioning = true;
+
+            SellerInside = false;
+
             yield return FadeOut();
 
             Teleport(
@@ -64,6 +69,29 @@ namespace Minigames.Reaction
             );
 
             yield return FadeIn();
+
+            IsTransitioning = false;
+        }
+        
+        public void ResetZone()
+        {
+            if (moveRoutine != null)
+            {
+                StopCoroutine(moveRoutine);
+                moveRoutine = null;
+            }
+
+            IsTransitioning = false;
+
+            SellerInside = false;
+
+            particles.Clear(true);
+            particles.Stop(
+                true,
+                ParticleSystemStopBehavior.StopEmittingAndClear
+            );
+
+            emission.rateOverTime = 40f;
         }
 
         private IEnumerator FadeOut()
@@ -105,11 +133,16 @@ namespace Minigames.Reaction
                 yield return null;
             }
 
-            particles.Clear();
+            particles.Stop(
+                true,
+                ParticleSystemStopBehavior.StopEmittingAndClear
+            );
         }
 
         private IEnumerator FadeIn()
         {
+            particles.Play();
+            
             float targetRate = 40f;
 
             float timer = 0f;
