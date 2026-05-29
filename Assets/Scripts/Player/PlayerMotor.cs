@@ -7,6 +7,7 @@ namespace Player
     {
         [Header("References")]
         [SerializeField] private PlayerInputReader input;
+        [SerializeField] private PlayerSlipState slipState;
 
         private CharacterController controller;
 
@@ -36,23 +37,54 @@ namespace Player
 
         private Vector3 velocity;
         private Vector3 currentMove;
+        
+        private Vector3 externalMove;
+        private float controlMultiplier = 1f;
 
         private bool isGrounded;
         private bool jumpConsumed;
 
+        private bool controlsEnabled = true;
+
         public Vector3 MoveDirection => currentMove;
         public bool IsGrounded => isGrounded;
         public float VerticalVelocity => velocity.y;
-        public float CurrentSpeed => currentMove.magnitude;
+        
+        public void ApplyExternalMovement(Vector3 move)
+        {
+            externalMove += move;
+        }
+
+        public void SetExternalSlowdown(float value)
+        {
+            controlMultiplier = Mathf.Clamp01(value);
+        }
 
         private void Awake()
         {
             controller = GetComponent<CharacterController>();
         }
 
+        public void SetControlEnabled(bool enabled)
+        {
+            controlsEnabled = enabled;
+
+            if (!enabled)
+            {
+                currentMove = Vector3.zero;
+                velocity = Vector3.zero;
+            }
+        }
+
         private void Update()
         {
             GroundCheck();
+
+            if (!controlsEnabled)
+            {
+                ApplyGravity();
+                return;
+            }
 
             Move();
 
@@ -84,41 +116,48 @@ namespace Player
         {
             Vector2 moveInput = input.Move;
 
-            Vector3 move =
+            Vector3 inputMove =
                 transform.right * moveInput.x +
                 transform.forward * moveInput.y;
 
             float targetSpeed =
                 input.SprintHeld ? sprintSpeed : walkSpeed;
 
-            Vector3 targetMove = move * targetSpeed;
+            Vector3 targetMove = inputMove * targetSpeed;
+
+            targetMove *= controlMultiplier;
 
             float control = isGrounded ? 1f : airControl;
 
             float smooth =
                 moveInput.magnitude > 0.1f
-                ? acceleration
-                : deceleration;
+                    ? acceleration
+                    : deceleration;
 
-            currentMove = Vector3.Lerp(
+            Vector3 desiredMove = Vector3.Lerp(
                 currentMove,
                 targetMove,
                 smooth * control * Time.deltaTime
             );
+
+            desiredMove += externalMove;
+
+            externalMove = Vector3.Lerp(
+                externalMove,
+                Vector3.zero,
+                5f * Time.deltaTime
+            );
+
+            currentMove = desiredMove;
 
             controller.Move(currentMove * Time.deltaTime);
         }
 
         private void Jump()
         {
-            if (!input.JumpPressed)
-                return;
-
-            if (!isGrounded)
-                return;
-
-            if (jumpConsumed)
-                return;
+            if (!input.JumpPressed) return;
+            if (!isGrounded) return;
+            if (jumpConsumed) return;
 
             jumpConsumed = true;
 
@@ -129,14 +168,12 @@ namespace Player
 
         private void ApplyGravity()
         {
+            float g = gravity;
+
             if (velocity.y < 0)
-            {
-                velocity.y += gravity * fallMultiplier * Time.deltaTime;
-            }
-            else
-            {
-                velocity.y += gravity * Time.deltaTime;
-            }
+                g *= fallMultiplier;
+
+            velocity.y += g * Time.deltaTime;
 
             controller.Move(velocity * Time.deltaTime);
         }

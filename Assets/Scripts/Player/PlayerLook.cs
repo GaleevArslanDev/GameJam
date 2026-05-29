@@ -7,6 +7,7 @@ namespace Player
         [Header("References")]
         [SerializeField] private PlayerInputReader input;
         [SerializeField] private Transform cameraRoot;
+        [SerializeField] private PlayerSlipState slipState;
 
         [Header("Settings")]
         [SerializeField] private float sensitivity = 2f;
@@ -21,14 +22,24 @@ namespace Player
 
         private Vector2 currentLook;
 
+        private bool controlsEnabled = true;
+
         private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
 
+        public void SetControlEnabled(bool enabled)
+        {
+            controlsEnabled = enabled;
+        }
+
         private void Update()
         {
+            if (!controlsEnabled)
+                return;
+
             Look();
         }
 
@@ -48,9 +59,7 @@ namespace Player
             pitch -= mouseY;
             pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
 
-            cameraRoot.localRotation =
-                Quaternion.Euler(pitch, 0f, 0f);
-
+            cameraRoot.localRotation = Quaternion.Euler(pitch, 0f, 0f);
             transform.Rotate(Vector3.up * mouseX);
         }
     }
