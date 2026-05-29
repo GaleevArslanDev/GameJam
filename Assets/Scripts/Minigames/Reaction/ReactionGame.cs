@@ -36,7 +36,9 @@ namespace Minigames.Reaction
 
         private int currentRound;
 
-        private bool active;
+        [SerializeField]private bool active;
+        
+        private bool waitingNextRound;
 
         public ReactionZone Zone => reactionZone;
 
@@ -48,6 +50,8 @@ namespace Minigames.Reaction
         public override void StartGame()
         {
             base.StartGame();
+            
+            waitingNextRound = false;
 
             currentRound = 0;
 
@@ -61,12 +65,24 @@ namespace Minigames.Reaction
             base.StopGame();
 
             active = false;
+
+            CancelInvoke();
+
+            reactionZone.ResetZone();
         }
 
         public void CheckHit()
         {
             if (!active)
                 return;
+
+            if (waitingNextRound)
+                return;
+
+            if (reactionZone.IsTransitioning)
+                return;
+
+            waitingNextRound = true;
 
             if (reactionZone.SellerInside)
             {
@@ -92,6 +108,8 @@ namespace Minigames.Reaction
 
         private void StartRound()
         {
+            waitingNextRound = false;
+            
             float t =
                 (float)currentRound /
                 (roundsToWin - 1);

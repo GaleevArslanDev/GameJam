@@ -5,9 +5,6 @@ namespace Minigames.Reaction
 {
     public class ReactionInput : MonoBehaviour
     {
-        [SerializeField]
-        private ReactionSeller seller;
-
         private void Awake()
         {
             enabled = false;

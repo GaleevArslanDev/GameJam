@@ -34,6 +34,9 @@ namespace Minigames.Core
 
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
+                if (MinigameController.Instance.IsBusy)
+                    return;
+                
                 StartRandomGame();
             }
         }
@@ -123,6 +126,7 @@ namespace Minigames.Core
 
         public void HideSeller()
         {
+            playerInside = false;
             gameObject.SetActive(false);
         }
 

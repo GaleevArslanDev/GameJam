@@ -30,6 +30,8 @@ namespace Minigames.Core
 
         private MinigameBase currentGame;
         private SellerNPC currentSeller;
+        
+        public bool IsBusy { get; private set; }
 
         private void Awake()
         {
@@ -41,6 +43,11 @@ namespace Minigames.Core
             SellerNPC seller
         )
         {
+            if (IsBusy)
+                return;
+
+            IsBusy = true;
+
             StartCoroutine(
                 StartMinigameRoutine(
                     game,
@@ -75,12 +82,11 @@ namespace Minigames.Core
                 SwitchToMinigameCamera();
 
                 currentGame.gameObject.SetActive(true);
-
-                currentGame.StartGame();
-
-                currentGame.OnMinigameFinished +=
-                    FinishCurrentGame;
             });
+            currentGame.StartGame();
+
+            currentGame.OnMinigameFinished +=
+                FinishCurrentGame;
         }
 
         private void FinishCurrentGame(bool success)
@@ -117,6 +123,8 @@ namespace Minigames.Core
 
             Minigames.UI.MinigameResultUI
                 .Instance.Hide();
+            
+            IsBusy = false;
         }
 
         private void SavePlayerState()
