@@ -162,8 +162,6 @@ namespace Player
             jumpConsumed = true;
 
             velocity.y = jumpForce;
-
-            input.ConsumeJump();
         }
 
         private void ApplyGravity()
