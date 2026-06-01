@@ -1,36 +1,44 @@
 ﻿using System.Collections;
-using UnityEngine;
+using Minigames.Core;
+using Minigames.HookGrab;
+using Minigames.Reaction;
+using Minigames.Rhythm;
+using Minigames.Throwing;
 using Player;
+using UnityEngine;
 using Unity.Cinemachine;
+using Minigames.UI;
 
 namespace Minigames.Core
 {
     public class MinigameController : MonoBehaviour
     {
-        public static MinigameController Instance;
+        public static MinigameController Instance { get; private set; }
 
-        [Header("Player")]
         [SerializeField] private GameObject player;
 
-        [SerializeField] private PlayerMotor playerMotor;
-        [SerializeField] private PlayerLook playerLook;
+        [SerializeField] private CharacterController controller;
+        [SerializeField] private PlayerMotor motor;
+        [SerializeField] private PlayerLook look;
 
-        [SerializeField]
-        private CharacterController characterController;
+        [SerializeField] private Transform cameraRoot;
 
-        [Header("Cameras")]
-        [SerializeField]
-        private CinemachineCamera fpsCamera;
+        [SerializeField] private CinemachineCamera fpsCamera;
+        [SerializeField] private CinemachineCamera minigameCamera;
 
-        [SerializeField]
-        private CinemachineCamera minigameCamera;
+        [Header("Systems")]
+        [SerializeField] private MinigamePlayerSystems systems;
 
-        private Vector3 savedPosition;
-        private Quaternion savedRotation;
+        [Header("UI")]
+        [SerializeField] private ThrowingGameUI throwingUI;
+        [SerializeField] private MinigameResultUI resultUI;
 
         private MinigameBase currentGame;
         private SellerNPC currentSeller;
+        private MinigameContext context;
         
+        private Vector3 savedPosition;
+
         public bool IsBusy { get; private set; }
 
         private void Awake()
@@ -38,170 +46,127 @@ namespace Minigames.Core
             Instance = this;
         }
 
-        public void StartMinigame(
-            MinigameBase game,
-            SellerNPC seller
-        )
+        public void RequestStart(SellerNPC seller)
         {
-            if (IsBusy)
-                return;
+            if (IsBusy) return;
 
-            IsBusy = true;
-
-            StartCoroutine(
-                StartMinigameRoutine(
-                    game,
-                    seller
-                )
-            );
+            StartCoroutine(StartRoutine(seller));
         }
 
-        private IEnumerator StartMinigameRoutine(
-            MinigameBase game,
-            SellerNPC seller
-        )
+        private IEnumerator StartRoutine(SellerNPC seller)
         {
-            currentGame = game;
+            IsBusy = true;
             currentSeller = seller;
 
+            // 1. CREATE CONTEXT
+            context = new MinigameContext
+            {
+                Player = player,
+                PlayerTransform = player.transform,
+                Systems = systems,
+                ThrowingUI = throwingUI,
+                ResultUI = resultUI,
+                Seller = seller,
+                CharacterController = controller,
+                Motor = motor,
+                Look = look
+            };
+
+            // 2. PICK GAME
+            MinigameBase prefab = seller.GetRandomMinigame();
+
+            currentGame = Instantiate(
+                prefab,
+                seller.ArenaSpawnPoint.position,
+                seller.ArenaSpawnPoint.rotation
+            );
+
+            currentGame.Initialize(context);
+
+            currentGame.OnFinished += OnGameFinished;
+
+            // 3. DISABLE PLAYER CONTROL BEFORE TRANSITION
+            motor.SetControlEnabled(false);
+            look.SetControlEnabled(false);
+
+            // 4. CAMERA SWITCH PREP (before spin)
+            
+            
+            savedPosition = player.transform.position;
+            
+            Debug.Log("Before spin");
+
+            // 5. SPIN TRANSITION + TELEPORT
             yield return SpinTransition.Instance.Play(() =>
             {
-                SavePlayerState();
+                controller.enabled = false;
+                // TELEPORT PLAYER DURING SPIN (midAction)
+                player.transform.position = currentGame.PlayerPoint.position;
+                player.transform.rotation = currentGame.PlayerPoint.rotation;
+                controller.enabled = true;
+                fpsCamera.Priority = 0;
+                minigameCamera.Priority = 20;
 
-                DisableFPSController();
-
-                seller.HideSeller();
-
-                TeleportPlayer(game.PlayerPoint);
-
-                minigameCamera.LookAt = game.LookAtPoint;
-                minigameCamera.Follow = game.LookAtPoint;
-
-                EnableMinigameSystems();
-
-                SwitchToMinigameCamera();
-
-                currentGame.gameObject.SetActive(true);
+                // ALIGN CAMERA ROOT IF NEEDED
+                if (currentGame.LookAtPoint != null)
+                {
+                    minigameCamera.Follow = currentGame.PlayerPoint;
+                    minigameCamera.LookAt = currentGame.LookAtPoint;
+                }
             });
-            currentGame.StartGame();
+            Debug.Log("Before binding");
+            
+            
+            currentGame.BindSystems(systems);
+            Debug.Log("Binded");
 
-            currentGame.OnMinigameFinished +=
-                FinishCurrentGame;
+            // 6. RE-ENABLE CONTROLLER FOR MINIGAME (if needed)
+            motor.SetControlEnabled(false);
+            look.SetControlEnabled(false);
+
+            // 7. START GAME
+            currentGame.StartGame();
         }
 
-        private void FinishCurrentGame(bool success)
+        private void OnGameFinished(bool success)
         {
-            StartCoroutine(
-                FinishRoutine(success)
-            );
+            StartCoroutine(FinishRoutine(success));
         }
 
         private IEnumerator FinishRoutine(bool success)
         {
-            currentGame.OnMinigameFinished -=
-                FinishCurrentGame;
+            currentGame.OnFinished -= OnGameFinished;
 
             currentGame.StopGame();
+            Destroy(currentGame.gameObject);
 
-            Minigames.UI.MinigameResultUI
-                .Instance.Show(success);
+            resultUI.Show(success);
             
-            DisableMinigameSystems();
+            minigameCamera.Priority = 0;
+            fpsCamera.Priority = 20;
+            
+            controller.enabled = false;
+            player.transform.position = savedPosition;
+            controller.enabled = true;
 
-            RestorePlayerState();
+            yield return new WaitForSeconds(5f);
+
+            // 1. DISABLE MINIGAME CAMERA
+            resultUI.Hide();
+            
+            // 3. RESTORE PLAYER CONTROL
+            motor.SetControlEnabled(true);
+            look.SetControlEnabled(true);
+
+            systems.DisableAll();
 
             currentSeller.ShowSeller();
 
-            SwitchToFPSCamera();
-
-            EnableFPSController();
-
             currentGame = null;
             currentSeller = null;
+            context = null;
 
-            yield return new WaitForSeconds(2f);
-
-            Minigames.UI.MinigameResultUI
-                .Instance.Hide();
-            
             IsBusy = false;
-        }
-
-        private void SavePlayerState()
-        {
-            savedPosition = player.transform.position;
-            savedRotation = player.transform.rotation;
-        }
-
-        private void RestorePlayerState()
-        {
-            characterController.enabled = false;
-
-            player.transform.position = savedPosition;
-            player.transform.rotation = savedRotation;
-
-            characterController.enabled = true;
-        }
-
-        private void TeleportPlayer(Transform point)
-        {
-            characterController.enabled = false;
-
-            player.transform.position = point.position;
-            player.transform.rotation = point.rotation;
-
-            characterController.enabled = true;
-        }
-
-        private void DisableFPSController()
-        {
-            playerMotor.enabled = false;
-            playerLook.enabled = false;
-        }
-
-        private void EnableFPSController()
-        {
-            playerMotor.enabled = true;
-            playerLook.enabled = true;
-        }
-
-        private void EnableMinigameSystems()
-        {
-            foreach (
-                MonoBehaviour system
-                in currentGame.GameplaySystems
-            )
-            {
-                system.enabled = true;
-            }
-
-            Cursor.lockState =
-                CursorLockMode.Locked;
-
-            Cursor.visible = false;
-        }
-
-        private void DisableMinigameSystems()
-        {
-            foreach (
-                MonoBehaviour system
-                in currentGame.GameplaySystems
-            )
-            {
-                system.enabled = false;
-            }
-        }
-
-        private void SwitchToMinigameCamera()
-        {
-            fpsCamera.Priority = 0;
-            minigameCamera.Priority = 20;
-        }
-
-        private void SwitchToFPSCamera()
-        {
-            fpsCamera.Priority = 20;
-            minigameCamera.Priority = 0;
         }
     }
 }

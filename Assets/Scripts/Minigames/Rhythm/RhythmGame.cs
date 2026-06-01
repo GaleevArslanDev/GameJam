@@ -5,60 +5,42 @@ namespace Minigames.Rhythm
 {
     public class RhythmGame : MinigameBase
     {
-        public static RhythmGame Instance;
+        [SerializeField] private int roundsToWin = 6;
+        [SerializeField] private float delayBetweenRounds = 1f;
+        [SerializeField] private float timePerRound = 2f;
+        
+        [SerializeField] private RhythmTile forwardTile;
+        [SerializeField] private RhythmTile backwardTile;
+        [SerializeField] private RhythmTile leftTile;
+        [SerializeField] private RhythmTile rightTile;
+        
+        [SerializeField] private Transform centerPoint;
 
-        [Header("Game")]
-        [SerializeField]
-        private int roundsToWin = 6;
-
-        [SerializeField]
-        private float delayBetweenRounds = 1f;
-
-        [SerializeField]
-        private float timePerRound = 2f;
-
-        [Header("Tiles")]
-        [SerializeField]
-        private RhythmTile[] tiles;
+        [SerializeField] private RhythmTile[] tiles;
 
         private RhythmTile currentTarget;
-
         private int currentRound;
 
         private float timer;
-
         private bool active;
         private bool inputEnabled;
-        private bool roundResolved;
+        private bool resolved;
         
         public bool IsActive => active;
-        public bool InputEnabled => inputEnabled;
 
-        private void Awake()
-        {
-            Instance = this;
-        }
+        public bool InputEnabled => inputEnabled;
 
         public override void StartGame()
         {
             base.StartGame();
 
-            CancelInvoke();
-
-            currentRound = 0;
-
             active = true;
             inputEnabled = false;
-            roundResolved = false;
+            resolved = false;
+            currentRound = 0;
 
-            timer = 0f;
-
-            currentTarget = null;
-
-            foreach (RhythmTile tile in tiles)
-            {
-                tile.SetIdle();
-            }
+            foreach (var t in tiles)
+                t.SetIdle();
 
             StartRound();
         }
@@ -68,109 +50,75 @@ namespace Minigames.Rhythm
             base.StopGame();
 
             active = false;
-
-            inputEnabled = false;
-
             CancelInvoke();
-
-            foreach (RhythmTile tile in tiles)
-            {
-                tile.SetIdle();
-            }
         }
 
         private void Update()
         {
-            if (!active)
-                return;
-
-            if (!inputEnabled)
+            if (!active || !inputEnabled)
                 return;
 
             timer -= Time.deltaTime;
 
-            if (timer <= 0f)
-            {
-                LoseGame();
-            }
+            if (timer <= 0)
+                Finish(false);
         }
 
         private void StartRound()
         {
-            roundResolved = false;
-
+            resolved = false;
             inputEnabled = false;
 
-            foreach (RhythmTile tile in tiles)
-            {
-                tile.SetIdle();
-            }
+            foreach (var t in tiles)
+                t.SetIdle();
 
-            int index =
-                Random.Range(0, tiles.Length);
-
-            currentTarget = tiles[index];
-
-            currentTarget.Activate();
+            currentTarget = tiles[Random.Range(0, tiles.Length)];
+            currentTarget.Activate(this);
         }
 
         public void EnableInput()
         {
             timer = timePerRound;
-
             inputEnabled = true;
         }
 
-        public void TryStep(
-            RhythmTile steppedTile
-        )
+        public void TryStep(RhythmTile tile)
         {
-            if (!active)
+            if (!active || !inputEnabled || resolved)
                 return;
 
-            if (!inputEnabled)
-                return;
-
-            if (roundResolved)
-                return;
-
-            roundResolved = true;
-
+            resolved = true;
             inputEnabled = false;
 
-            if (steppedTile == currentTarget)
+            if (tile == currentTarget)
             {
                 currentRound++;
 
                 if (currentRound >= roundsToWin)
                 {
-                    WinGame();
+                    Finish(true);
                     return;
                 }
 
-                Invoke(
-                    nameof(StartRound),
-                    delayBetweenRounds
-                );
+                Invoke(nameof(StartRound), delayBetweenRounds);
             }
             else
             {
-                LoseGame();
+                Finish(false);
             }
         }
-
-        private void WinGame()
+        
+        public override void BindSystems(MinigamePlayerSystems systems)
         {
-            active = false;
-
-            Finish(true);
-        }
-
-        private void LoseGame()
-        {
-            active = false;
-
-            Finish(false);
+            base.BindSystems(systems);
+            systems.EnableRhythm(
+                forwardTile,
+                backwardTile,
+                leftTile,
+                rightTile,
+                centerPoint,
+                this
+            );
         }
     }
 }

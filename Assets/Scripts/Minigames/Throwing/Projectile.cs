@@ -4,41 +4,37 @@ namespace Minigames.Throwing
 {
     public class Projectile : MonoBehaviour
     {
+        private ThrowingGame game;
         private bool processed;
+
+        public void Init(ThrowingGame g)
+        {
+            game = g;
+        }
 
         private void Start()
         {
             Invoke(nameof(Miss), 5f);
         }
 
-        private void OnCollisionEnter(
-            Collision collision
-        )
+        private void OnCollisionEnter(Collision collision)
         {
-            if (processed)
-                return;
+            if (processed) return;
 
-            if (
-                collision.collider.CompareTag("Seller")
-            )
+            if (collision.collider.CompareTag("Seller"))
             {
                 processed = true;
-
-                ThrowingGame.Instance.RegisterHit();
-
+                game?.RegisterHit();
                 Destroy(gameObject);
             }
         }
 
         private void Miss()
         {
-            if (processed)
-                return;
+            if (processed) return;
 
             processed = true;
-
-            ThrowingGame.Instance.RegisterMiss();
-
+            game?.RegisterMiss();
             Destroy(gameObject);
         }
     }

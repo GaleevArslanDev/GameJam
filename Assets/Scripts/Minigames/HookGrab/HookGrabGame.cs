@@ -5,47 +5,31 @@ namespace Minigames.HookGrab
 {
     public class HookGrabGame : MinigameBase
     {
-        public static HookGrabGame Instance;
-
         [Header("Targets")]
-        [SerializeField]
-        private HookTarget[] targets;
+        [SerializeField] private HookTarget[] targets;
 
         [Header("Game")]
-        [SerializeField]
-        private int discountsNeeded = 5;
-
-        [SerializeField]
-        private int maxMisses = 3;
-
-        [SerializeField]
-        private float nextTargetDelay = 1f;
+        [SerializeField] private int discountsNeeded = 5;
+        [SerializeField] private int maxMisses = 3;
+        [SerializeField] private float nextTargetDelay = 1f;
+        [SerializeField] private HookSeller seller;
 
         private int currentDiscounts;
         private int currentMisses;
 
         private HookTarget currentTarget;
-
         private bool active;
-
-        private void Awake()
-        {
-            Instance = this;
-        }
 
         public override void StartGame()
         {
             base.StartGame();
 
             active = true;
-            
-            foreach (HookTarget target in targets)
-            {
-                target.ResetTarget();
-            }
-
             currentDiscounts = 0;
             currentMisses = 0;
+
+            foreach (var t in targets)
+                t.ResetTarget();
 
             ActivateRandomTarget();
         }
@@ -55,68 +39,41 @@ namespace Minigames.HookGrab
             base.StopGame();
 
             active = false;
+            
+            CancelInvoke();
 
-            foreach (HookTarget target in targets)
-            {
-                target.gameObject.SetActive(false);
-                target.SetInactive();
-            }
+            foreach (var t in targets)
+                t.gameObject.SetActive(false);
         }
 
         private void ActivateRandomTarget()
         {
-            foreach (HookTarget target in targets)
-            {
-                if (target.gameObject.activeSelf)
-                {
-                    target.SetInactive();
-                }
-            }
+            foreach (var t in targets)
+                t.SetInactive();
 
-            HookTarget randomTarget = null;
-
+            HookTarget pick = null;
             int safety = 50;
 
-            while (
-                randomTarget == null &&
-                safety > 0
-            )
+            while (pick == null && safety-- > 0)
             {
-                safety--;
-
-                int index =
-                    Random.Range(
-                        0,
-                        targets.Length
-                    );
-
-                if (
-                    targets[index]
-                    .gameObject.activeSelf
-                )
-                {
-                    randomTarget =
-                        targets[index];
-                }
+                var t = targets[Random.Range(0, targets.Length)];
+                if (t.gameObject.activeSelf)
+                    pick = t;
             }
 
-            if (randomTarget == null)
+            if (pick == null)
             {
-                WinGame();
+                Finish(true);
                 return;
             }
 
-            currentTarget = randomTarget;
-
+            currentTarget = pick;
             currentTarget.SetActiveTarget();
         }
 
-        public void RegisterTargetHit(
-            HookTarget target
-        )
+        public void RegisterTargetHit(HookTarget target)
         {
-            if (!active)
-                return;
+            if (!active) return;
 
             if (target != currentTarget)
             {
@@ -128,41 +85,27 @@ namespace Minigames.HookGrab
 
             if (currentDiscounts >= discountsNeeded)
             {
-                WinGame();
+                Finish(true);
                 return;
             }
 
-            Invoke(
-                nameof(ActivateRandomTarget),
-                nextTargetDelay
-            );
+            Invoke(nameof(ActivateRandomTarget), nextTargetDelay);
         }
 
         public void RegisterMiss()
         {
-            if (!active)
-                return;
+            if (!active) return;
 
             currentMisses++;
 
             if (currentMisses >= maxMisses)
-            {
-                LoseGame();
-            }
+                Finish(false);
         }
-
-        private void WinGame()
+        
+        public override void BindSystems(MinigamePlayerSystems systems)
         {
-            active = false;
-
-            Finish(true);
-        }
-
-        private void LoseGame()
-        {
-            active = false;
-
-            Finish(false);
+            base.BindSystems(systems);
+            systems.EnableHook(seller, this);
         }
     }
 }
