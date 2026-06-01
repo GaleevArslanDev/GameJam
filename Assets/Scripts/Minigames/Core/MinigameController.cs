@@ -106,6 +106,7 @@ namespace Minigames.Core
                 controller.enabled = true;
                 fpsCamera.Priority = 0;
                 minigameCamera.Priority = 20;
+                currentSeller.HideSeller();
 
                 // ALIGN CAMERA ROOT IF NEEDED
                 if (currentGame.LookAtPoint != null)
@@ -139,6 +140,10 @@ namespace Minigames.Core
 
             currentGame.StopGame();
             Destroy(currentGame.gameObject);
+            
+            var dept = currentSeller.GetComponent<World.DepartmentProduct>();
+            if (dept != null)
+                dept.ApplyDiscountResult(success);
 
             resultUI.Show(success);
             
