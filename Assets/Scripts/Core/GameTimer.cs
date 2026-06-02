@@ -12,6 +12,9 @@ namespace Core
 
         public float Normalized => timeLeft / timeLimit;
 
+        public float TimeLeft => timeLeft;
+        public float TimeLimit => timeLimit;
+
         private void Start()
         {
             timeLeft = timeLimit;
