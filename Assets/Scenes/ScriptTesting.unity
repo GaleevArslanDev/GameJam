@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 467857ec6b6d4dd0a067b5faddbfbadd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shopping.Wallet
-  startMoney: 200
+  startMoney: 20
   money: 0
 --- !u!114 &122187331
 MonoBehaviour:
@@ -419,7 +419,7 @@ MonoBehaviour:
   productsToChoose: 1
   discountPercent: 0.3
   failPenaltyPercent: 0.15
-  startMoney: 200
+  startMoney: 20
 --- !u!4 &122187332
 Transform:
   m_ObjectHideFlags: 0
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 701caeedd11f421d940383d010b15665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.GameTimer
-  timeLimit: 480
+  timeLimit: 10
 --- !u!114 &143994431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,6 +1096,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI.TimerUI
   timer: {fileID: 122187333}
   timerText: {fileID: 1374015676}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  dangerColor: {r: 1, g: 0, b: 0, a: 1}
+  dangerTime: 60
 --- !u!1 &505429229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,7 +2701,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 611, y: 0}
+  m_AnchoredPosition: {x: 611, y: -86}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1374930297
