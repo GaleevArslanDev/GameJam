@@ -17,8 +17,8 @@ namespace Minigames.HookGrab
         [SerializeField]
         private HookProjectile hookPrefab;
         
-        [SerializeField]
-        private HookSeller seller;
+        [HideInInspector]
+        public HookSeller seller;
 
         private Vector3 startPosition;
 
@@ -27,6 +27,12 @@ namespace Minigames.HookGrab
         private bool movementLocked;
 
         public Transform HookSpawn => hookSpawn;
+        private HookGrabGame game;
+
+        public void Initialize(HookGrabGame hookGame)
+        {
+            game = hookGame;
+        }
 
         private void Awake()
         {
@@ -106,10 +112,7 @@ namespace Minigames.HookGrab
                         hookSpawn.rotation
                     );
 
-                hook.Init(
-                    this,
-                    seller
-                );
+                hook.Init(this, seller, game);
 
                 canShoot = false;
             }

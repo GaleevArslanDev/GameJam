@@ -5,7 +5,6 @@ namespace Minigames.Throwing
     public class DodgingSeller : MonoBehaviour
     {
         [SerializeField] private float speed = 4f;
-
         [SerializeField] private float minX = -4f;
         [SerializeField] private float maxX = 4f;
 
@@ -22,8 +21,7 @@ namespace Minigames.Throwing
                 pos.x = maxX;
                 direction = -1;
             }
-
-            if (pos.x <= minX)
+            else if (pos.x <= minX)
             {
                 pos.x = minX;
                 direction = 1;

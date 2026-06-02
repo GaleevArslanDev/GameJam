@@ -126,8 +126,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Minigames.Rhythm.RhythmTile
   meshRenderer: {fileID: 2997389827930188495}
-  idleMaterial: {fileID: 2100000, guid: 5d6d6fdd1e9729c42aaae4e01246fbdd, type: 2}
-  blinkMaterial: {fileID: 2100000, guid: f5a19f605801e874ca4d394487e32a8b, type: 2}
-  activeMaterial: {fileID: 2100000, guid: 787855d790edcb34194e12256a8a9d98, type: 2}
-  blinkCount: 3
-  blinkInterval: 0.12
+  idle: {fileID: 2100000, guid: 5d6d6fdd1e9729c42aaae4e01246fbdd, type: 2}
+  blink: {fileID: 2100000, guid: f5a19f605801e874ca4d394487e32a8b, type: 2}
+  active: {fileID: 2100000, guid: 787855d790edcb34194e12256a8a9d98, type: 2}

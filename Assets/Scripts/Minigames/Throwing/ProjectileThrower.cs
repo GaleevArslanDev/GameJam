@@ -1,83 +1,63 @@
-﻿using Minigames.UI;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using Minigames.Core;
 
 namespace Minigames.Throwing
 {
     public class ProjectileThrower : MonoBehaviour
     {
-        [SerializeField]
-        private GameObject projectilePrefab;
+        [SerializeField] private GameObject projectilePrefab;
+        [SerializeField] private Transform shootPoint;
+        [SerializeField] private float throwForce = 20f;
+        [SerializeField] private int maxAmmo = 15;
 
-        [SerializeField]
-        private Transform shootPoint;
+        private int ammo;
+        private ThrowingGame game;
 
-        [SerializeField]
-        private float throwForce = 20f;
-
-        [SerializeField]
-        private int maxAmmo = 15;
-
-        private int currentAmmo;
-
-        private void Awake()
+        public void Init(ThrowingGame g)
         {
-            enabled = false;
+            game = g;
         }
 
         private void OnEnable()
         {
-            currentAmmo = maxAmmo;
+            ammo = maxAmmo;
+            UpdateAmmoUI();
+        }
+        
+        private void UpdateAmmoUI()
+        {
+            if (game == null)
+                return;
 
-            UpdateUI();
+            game.Context.ThrowingUI.UpdateAmmo(ammo, maxAmmo);
         }
 
         private void Update()
         {
-            if (
-                Mouse.current.leftButton
-                .wasPressedThisFrame
-            )
-            {
+            if (Mouse.current.leftButton.wasPressedThisFrame)
                 Throw();
-            }
         }
 
         private void Throw()
         {
-            if (currentAmmo <= 0)
+            if (ammo <= 0)
             {
-                ThrowingGame.Instance.LoseGame();
-
+                game?.RegisterMiss();
                 return;
             }
 
-            currentAmmo--;
+            ammo--;
+            
+            UpdateAmmoUI();
 
-            UpdateUI();
+            GameObject obj = Instantiate(projectilePrefab, shootPoint.position, shootPoint.rotation);
 
-            GameObject projectile =
-                Instantiate(
-                    projectilePrefab,
-                    shootPoint.position,
-                    shootPoint.rotation
-                );
+            Projectile p = obj.GetComponent<Projectile>();
+            p.Init(game);
 
-            Rigidbody rb =
-                projectile.GetComponent<Rigidbody>();
-
-            rb.AddForce(
-                shootPoint.forward * throwForce,
-                ForceMode.Impulse
-            );
-        }
-
-        private void UpdateUI()
-        {
-            ThrowingGameUI.Instance.UpdateAmmo(
-                currentAmmo,
-                maxAmmo
-            );
+            Rigidbody rb = obj.GetComponent<Rigidbody>();
+            rb.AddForce(shootPoint.forward * throwForce, ForceMode.Impulse);
         }
     }
 }

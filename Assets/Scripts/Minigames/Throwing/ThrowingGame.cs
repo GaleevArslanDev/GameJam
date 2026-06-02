@@ -6,115 +6,57 @@ namespace Minigames.Throwing
 {
     public class ThrowingGame : MinigameBase
     {
-        public static ThrowingGame Instance;
+        [SerializeField] private int hitsRequired = 9;
+        [SerializeField] private int maxMisses = 5;
 
-        [Header("Game")]
-        [SerializeField]
-        private int hitsRequired = 9;
-
-        [SerializeField]
-        private int maxMisses = 5;
-
-        private int currentHits;
-        private int currentMisses;
+        private int hits;
+        private int misses;
 
         private bool active;
-
-        public int HitsRequired => hitsRequired;
-        public int MaxMisses => maxMisses;
-
-        private void Awake()
-        {
-            Instance = this;
-        }
 
         public override void StartGame()
         {
             base.StartGame();
 
-            currentHits = 0;
-            currentMisses = 0;
-
+            hits = 0;
+            misses = 0;
             active = true;
 
             UpdateUI();
         }
 
-        public override void StopGame()
-        {
-            base.StopGame();
-            
-            Projectile[] projectiles =
-                FindObjectsByType<Projectile>(
-                    FindObjectsSortMode.None
-                );
-
-            foreach (Projectile projectile in projectiles)
-            {
-                Destroy(projectile.gameObject);
-            }
-
-            active = false;
-        }
-
         public void RegisterHit()
         {
-            if (!active)
-                return;
+            if (!active) return;
 
-            currentHits++;
-
+            hits++;
             UpdateUI();
 
-            if (currentHits >= hitsRequired)
-            {
-                WinGame();
-            }
+            if (hits >= hitsRequired)
+                Finish(true);
         }
 
         public void RegisterMiss()
         {
-            if (!active)
-                return;
+            if (!active) return;
 
-            currentMisses++;
-
+            misses++;
             UpdateUI();
 
-            if (currentMisses >= maxMisses)
-            {
-                LoseGame();
-            }
+            if (misses >= maxMisses)
+                Finish(false);
         }
 
         private void UpdateUI()
         {
-            ThrowingGameUI.Instance.UpdateHits(
-                currentHits,
-                hitsRequired
-            );
-
-            ThrowingGameUI.Instance.UpdateMisses(
-                currentMisses,
-                maxMisses
-            );
+            Context.ThrowingUI.UpdateHits(hits, hitsRequired);
+            Context.ThrowingUI.UpdateMisses(misses, maxMisses);
         }
-
-        private void WinGame()
+        
+        public override void BindSystems(MinigamePlayerSystems systems)
         {
-            active = false;
-
-            Finish(true);
-        }
-
-        public void LoseGame()
-        {
-            if (!active)
-                return;
-
-            active = false;
-
-            Finish(false);
+            base.BindSystems(systems);
+            systems.EnableThrowing(this);
         }
     }
 }

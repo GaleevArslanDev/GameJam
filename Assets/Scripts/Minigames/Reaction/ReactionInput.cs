@@ -5,6 +5,13 @@ namespace Minigames.Reaction
 {
     public class ReactionInput : MonoBehaviour
     {
+        private ReactionGame game;
+
+        public void Init(ReactionGame g)
+        {
+            game = g;
+        }
+
         private void Awake()
         {
             enabled = false;
@@ -12,13 +19,8 @@ namespace Minigames.Reaction
 
         private void Update()
         {
-            if (
-                Mouse.current.leftButton
-                .wasPressedThisFrame
-            )
-            {
-                ReactionGame.Instance.CheckHit();
-            }
+            if (Mouse.current.leftButton.wasPressedThisFrame)
+                game?.CheckHit();
         }
     }
 }

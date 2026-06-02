@@ -4,36 +4,29 @@ namespace Minigames.HookGrab
 {
     public class HookProjectile : MonoBehaviour
     {
-        [SerializeField]
-        private float speed = 20f;
-
-        [SerializeField]
-        private float maxDistance = 15f;
-
-        [SerializeField]
-        private HookRope rope;
+        [SerializeField] private float speed = 20f;
+        [SerializeField] private float maxDistance = 15f;
+        [SerializeField] private HookRope rope;
 
         private HookGrabPlayer owner;
-        
         private HookSeller seller;
+        private HookGrabGame game;
 
         private Vector3 startPosition;
-
         private bool returning;
-
         private HookTarget hookedTarget;
 
         public void Init(
             HookGrabPlayer player,
-            HookSeller hookSeller
+            HookSeller hookSeller,
+            HookGrabGame hookGame
         )
         {
             owner = player;
-
             seller = hookSeller;
+            game = hookGame;
 
-            startPosition =
-                transform.position;
+            startPosition = transform.position;
 
             rope.Init(
                 player.HookSpawn,
@@ -50,16 +43,9 @@ namespace Minigames.HookGrab
         {
             if (!returning)
             {
-                transform.position +=
-                    transform.forward *
-                    speed *
-                    Time.deltaTime;
+                transform.position += transform.forward * speed * Time.deltaTime;
 
-                float distance =
-                    Vector3.Distance(
-                        startPosition,
-                        transform.position
-                    );
+                float distance = Vector3.Distance(startPosition, transform.position);
 
                 if (distance >= maxDistance)
                 {
@@ -69,21 +55,12 @@ namespace Minigames.HookGrab
             else
             {
                 Vector3 direction =
-                    (
-                        owner.HookSpawn.position -
-                        transform.position
-                    ).normalized;
+                    (owner.HookSpawn.position - transform.position).normalized;
 
-                transform.position +=
-                    direction *
-                    speed *
-                    Time.deltaTime;
+                transform.position += direction * speed * Time.deltaTime;
 
                 float distance =
-                    Vector3.Distance(
-                        transform.position,
-                        owner.HookSpawn.position
-                    );
+                    Vector3.Distance(transform.position, owner.HookSpawn.position);
 
                 if (distance <= 0.3f)
                 {
@@ -101,32 +78,24 @@ namespace Minigames.HookGrab
         {
             if (hookedTarget != null)
             {
-                HookGrabGame.Instance
-                    .RegisterTargetHit(
-                        hookedTarget
-                    );
+                game?.RegisterTargetHit(hookedTarget);
 
                 hookedTarget.Collect();
 
                 owner.SetMovementLocked(false);
-
                 seller.SetPaused(false);
             }
 
             owner.Reload();
-
             Destroy(gameObject);
         }
 
-        private void OnTriggerEnter(
-            Collider other
-        )
+        private void OnTriggerEnter(Collider other)
         {
             if (returning)
                 return;
 
-            HookTarget target =
-                other.GetComponent<HookTarget>();
+            HookTarget target = other.GetComponent<HookTarget>();
 
             if (target != null)
             {
@@ -135,21 +104,15 @@ namespace Minigames.HookGrab
                 target.HookTo(transform);
 
                 owner.SetMovementLocked(true);
-
                 seller.SetPaused(true);
 
                 StartReturn();
-
                 return;
             }
 
-            if (
-                other.CompareTag("Seller")
-            )
+            if (other.CompareTag("Seller"))
             {
-                HookGrabGame.Instance
-                    .RegisterMiss();
-
+                game?.RegisterMiss();
                 StartReturn();
             }
         }
@@ -159,7 +122,6 @@ namespace Minigames.HookGrab
             if (owner != null)
             {
                 owner.Reload();
-
                 owner.SetMovementLocked(false);
             }
 

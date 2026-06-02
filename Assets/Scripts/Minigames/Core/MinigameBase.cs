@@ -3,37 +3,42 @@ using UnityEngine;
 
 namespace Minigames.Core
 {
-    public abstract class MinigameBase : MonoBehaviour, IMinigame
+    public abstract class MinigameBase : MonoBehaviour
     {
-        public event Action<bool> OnMinigameFinished;
+        public event Action<bool> OnFinished;
 
-        [Header("Setup")]
         [SerializeField] protected Transform playerPoint;
-
-        [SerializeField] protected GameObject minigameRoot;
-
         [SerializeField] protected Transform lookAtPoint;
-        
-        [SerializeField]
-        protected MonoBehaviour[] gameplaySystems;
+        [SerializeField] protected GameObject root;
 
-        public MonoBehaviour[] GameplaySystems => gameplaySystems;
+        public MinigameContext Context { get; protected set; }
+
         public Transform PlayerPoint => playerPoint;
         public Transform LookAtPoint => lookAtPoint;
 
+        public virtual void Initialize(MinigameContext context)
+        {
+            Context = context;
+        }
+
         public virtual void StartGame()
         {
-            minigameRoot.SetActive(true);
+            root.SetActive(true);
         }
 
         public virtual void StopGame()
         {
-            minigameRoot.SetActive(false);
+            root.SetActive(false);
         }
 
         protected void Finish(bool success)
         {
-            OnMinigameFinished?.Invoke(success);
+            OnFinished?.Invoke(success);
+        }
+
+        public virtual void BindSystems(MinigamePlayerSystems systems)
+        {
+            Debug.Log("BindSystems on " + gameObject.name);
         }
     }
 }

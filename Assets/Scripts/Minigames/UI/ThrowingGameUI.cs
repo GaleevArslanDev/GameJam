@@ -5,47 +5,23 @@ namespace Minigames.UI
 {
     public class ThrowingGameUI : MonoBehaviour
     {
-        public static ThrowingGameUI Instance;
+        [SerializeField] private TextMeshProUGUI hitsText;
+        [SerializeField] private TextMeshProUGUI missesText;
+        [SerializeField] private TextMeshProUGUI ammoText;
 
-        [SerializeField]
-        private TextMeshProUGUI hitsText;
-
-        [SerializeField]
-        private TextMeshProUGUI missesText;
-
-        [SerializeField]
-        private TextMeshProUGUI ammoText;
-
-        private void Awake()
+        public void UpdateHits(int current, int target)
         {
-            Instance = this;
+            hitsText.text = $"Hits: {current}/{target}";
         }
 
-        public void UpdateHits(
-            int current,
-            int target
-        )
+        public void UpdateMisses(int current, int target)
         {
-            hitsText.text =
-                $"Hits: {current}/{target}";
+            missesText.text = $"Misses: {current}/{target}";
         }
 
-        public void UpdateMisses(
-            int current,
-            int target
-        )
+        public void UpdateAmmo(int current, int max)
         {
-            missesText.text =
-                $"Misses: {current}/{target}";
-        }
-
-        public void UpdateAmmo(
-            int current,
-            int max
-        )
-        {
-            ammoText.text =
-                $"Ammo: {current}/{max}";
+            ammoText.text = $"Ammo: {current}/{max}";
         }
     }
 }

@@ -1,101 +1,94 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Minigames.Rhythm;
 
 namespace Minigames.Rhythm
 {
     public class RhythmPlayerMover : MonoBehaviour
     {
-        [Header("Tiles")]
-        [SerializeField]
-        private RhythmTile forwardTile;
-
-        [SerializeField]
-        private RhythmTile backwardTile;
-
-        [SerializeField]
-        private RhythmTile leftTile;
-
-        [SerializeField]
-        private RhythmTile rightTile;
-
-        [Header("Current")]
-        [SerializeField]
-        private RhythmTile currentTile;
+        [HideInInspector] public RhythmTile forwardTile;
+        [HideInInspector] public RhythmTile backwardTile;
+        [HideInInspector] public RhythmTile leftTile;
+        [HideInInspector] public RhythmTile rightTile;
 
         [Header("Movement")]
-        [SerializeField]
-        private float moveSpeed = 10f;
+        [SerializeField] private float moveSpeed = 10f;
+        [SerializeField] private float returnSpeed = 8f;
+        [SerializeField] private float playerY = 1f;
 
-        [SerializeField]
-        private float returnSpeed = 8f;
+        [HideInInspector] public Transform centerPoint;
 
-        [SerializeField]
-        private float playerY = 1f;
-
-        [Header("Center")]
-        [SerializeField]
-        private Transform centerPoint;
+        private RhythmGame game;
 
         private Vector3 targetPosition;
-
         private RhythmTile targetTile;
 
         private bool moving;
-
         private Coroutine returnRoutine;
+
+        private bool initialized;
+
+        public void Initialize(RhythmGame rhythmGame)
+        {
+            game = rhythmGame;
+            initialized = true;
+        }
 
         private void Awake()
         {
             enabled = false;
         }
 
+        private void OnEnable()
+        {
+            moving = false;
+            targetTile = null;
+
+            if (returnRoutine != null)
+            {
+                StopCoroutine(returnRoutine);
+                returnRoutine = null;
+            }
+        }
+
         private void OnDisable()
         {
             StopAllCoroutines();
-
             moving = false;
         }
 
         private void Update()
         {
-            HandleInput();
+            if (!initialized || game == null)
+                return;
 
+            HandleInput();
             Move();
         }
 
         private void HandleInput()
         {
-            if (!RhythmGame.Instance.InputEnabled)
+            if (!game.InputEnabled)
                 return;
 
             if (moving)
                 return;
 
             if (Keyboard.current.wKey.wasPressedThisFrame)
-            {
                 StartMove(forwardTile);
-            }
 
             if (Keyboard.current.sKey.wasPressedThisFrame)
-            {
                 StartMove(backwardTile);
-            }
 
             if (Keyboard.current.aKey.wasPressedThisFrame)
-            {
                 StartMove(leftTile);
-            }
 
             if (Keyboard.current.dKey.wasPressedThisFrame)
-            {
                 StartMove(rightTile);
-            }
         }
 
-        private void StartMove(
-            RhythmTile tile
-        )
+        private void StartMove(RhythmTile tile)
         {
             if (tile == null)
                 return;
@@ -103,16 +96,16 @@ namespace Minigames.Rhythm
             if (returnRoutine != null)
             {
                 StopCoroutine(returnRoutine);
+                returnRoutine = null;
             }
 
             targetTile = tile;
 
-            targetPosition =
-                new Vector3(
-                    tile.transform.position.x,
-                    playerY,
-                    tile.transform.position.z
-                );
+            targetPosition = new Vector3(
+                tile.transform.position.x,
+                playerY,
+                tile.transform.position.z
+            );
 
             moving = true;
         }
@@ -122,48 +115,23 @@ namespace Minigames.Rhythm
             if (!moving)
                 return;
 
-            transform.position =
-                Vector3.MoveTowards(
-                    transform.position,
-                    targetPosition,
-                    moveSpeed * Time.deltaTime
-                );
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                targetPosition,
+                moveSpeed * Time.deltaTime
+            );
 
-            if (
-                Vector3.Distance(
-                    transform.position,
-                    targetPosition
-                ) <= 0.02f
-            )
+            if (Vector3.Distance(transform.position, targetPosition) <= 0.02f)
             {
-                transform.position =
-                    targetPosition;
-
+                transform.position = targetPosition;
                 moving = false;
 
-                currentTile = targetTile;
+                game.TryStep(targetTile);
 
-                RhythmGame.Instance.TryStep(currentTile);
-
-                if (RhythmGame.Instance.IsActive)
+                if (game.IsActive)
                 {
-                    returnRoutine =
-                        StartCoroutine(
-                            ReturnToCenterRoutine()
-                        );
+                    returnRoutine = StartCoroutine(ReturnToCenterRoutine());
                 }
-            }
-        }
-        
-        private void OnEnable()
-        {
-            moving = false;
-
-            targetTile = null;
-
-            if (returnRoutine != null)
-            {
-                StopCoroutine(returnRoutine);
             }
         }
 
@@ -171,25 +139,18 @@ namespace Minigames.Rhythm
         {
             yield return new WaitForSeconds(0.1f);
 
-            while (
-                Vector3.Distance(
-                    transform.position,
-                    centerPoint.position
-                ) > 0.02f
-            )
+            while (Vector3.Distance(transform.position, centerPoint.position) > 0.02f)
             {
-                transform.position =
-                    Vector3.MoveTowards(
-                        transform.position,
-                        centerPoint.position,
-                        returnSpeed * Time.deltaTime
-                    );
+                transform.position = Vector3.MoveTowards(
+                    transform.position,
+                    centerPoint.position,
+                    returnSpeed * Time.deltaTime
+                );
 
                 yield return null;
             }
 
-            transform.position =
-                centerPoint.position;
+            transform.position = centerPoint.position;
         }
     }
 }
