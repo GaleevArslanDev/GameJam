@@ -55,8 +55,9 @@ namespace Minigames.Core
 
             bool triggered = false;
 
-            while (angle < targetAngle)
+            while (angle < targetAngle - 1f)
             {
+                Debug.Log($"Angle={angle} Speed={speed}");
                 float normalized =
                     angle / targetAngle;
 
@@ -110,6 +111,12 @@ namespace Minigames.Core
 
                     midAction?.Invoke();
                 }
+                
+                if (speed < 0.5f && normalized > 0.9f)
+                {
+                    angle = targetAngle;
+                    break;
+                }
 
                 yield return null;
             }
@@ -118,6 +125,7 @@ namespace Minigames.Core
 
             spinPivot.localRotation =
                 Quaternion.identity;
+            Debug.Log("Spin finished"); 
         }
     }
 }

@@ -5,86 +5,46 @@ namespace Minigames.Rhythm
 {
     public class RhythmTile : MonoBehaviour
     {
-        [Header("Visual")]
-        [SerializeField]
-        private MeshRenderer meshRenderer;
+        [SerializeField] private MeshRenderer meshRenderer;
+        [SerializeField] private Material idle;
+        [SerializeField] private Material blink;
+        [SerializeField] private Material active;
 
-        [SerializeField]
-        private Material idleMaterial;
+        private RhythmGame game;
+        private Coroutine routine;
 
-        [SerializeField]
-        private Material blinkMaterial;
-
-        [SerializeField]
-        private Material activeMaterial;
-
-        [Header("Blink")]
-        [SerializeField]
-        private int blinkCount = 3;
-
-        [SerializeField]
-        private float blinkInterval = 0.15f;
-
-        private Coroutine blinkRoutine;
-
-        public bool IsTarget { get; private set; }
-
-        private void Awake()
+        public void Activate(RhythmGame g)
         {
-            SetIdle();
+            game = g;
+
+            if (routine != null)
+                StopCoroutine(routine);
+
+            routine = StartCoroutine(Blink());
         }
 
-        public void Activate()
+        private IEnumerator Blink()
         {
-            if (blinkRoutine != null)
+            for (int i = 0; i < 3; i++)
             {
-                StopCoroutine(blinkRoutine);
+                meshRenderer.sharedMaterial = blink;
+                yield return new WaitForSeconds(0.15f);
+
+                meshRenderer.sharedMaterial = idle;
+                yield return new WaitForSeconds(0.15f);
             }
 
-            blinkRoutine =
-                StartCoroutine(BlinkRoutine());
-        }
+            meshRenderer.sharedMaterial = active;
 
-        private IEnumerator BlinkRoutine()
-        {
-            IsTarget = true;
-
-            for (int i = 0; i < blinkCount; i++)
-            {
-                meshRenderer.sharedMaterial =
-                    blinkMaterial;
-
-                yield return new WaitForSeconds(
-                    blinkInterval
-                );
-
-                meshRenderer.sharedMaterial =
-                    idleMaterial;
-
-                yield return new WaitForSeconds(
-                    blinkInterval
-                );
-            }
-
-            meshRenderer.sharedMaterial =
-                activeMaterial;
-
-            RhythmGame.Instance.EnableInput();
+            game.EnableInput();
         }
 
         public void SetIdle()
         {
-            if (blinkRoutine != null)
-            {
-                StopCoroutine(blinkRoutine);
+            if (routine != null)
+                StopCoroutine(routine);
 
-                blinkRoutine = null;
-            }
-
-            IsTarget = false;
-
-            meshRenderer.sharedMaterial =
-                idleMaterial;
+            meshRenderer.sharedMaterial = idle;
         }
     }
 }

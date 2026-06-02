@@ -23,20 +23,12 @@ namespace Player
 
         public void OnJump(InputAction.CallbackContext context)
         {
-            if (context.performed)
-            {
-                JumpPressed = true;
-            }
+            JumpPressed = context.ReadValueAsButton();
         }
 
         public void OnSprint(InputAction.CallbackContext context)
         {
             SprintHeld = context.ReadValueAsButton();
-        }
-
-        public void ConsumeJump()
-        {
-            JumpPressed = false;
         }
     }
 }

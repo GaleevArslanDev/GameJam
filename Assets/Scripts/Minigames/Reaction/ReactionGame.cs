@@ -5,57 +5,31 @@ namespace Minigames.Reaction
 {
     public class ReactionGame : MinigameBase
     {
-        public static ReactionGame Instance;
-
         [Header("Gameplay")]
-        [SerializeField]
-        private int roundsToWin = 5;
-
-        [SerializeField]
-        private float delayBetweenRounds = 1f;
+        [SerializeField] private int roundsToWin = 5;
+        [SerializeField] private float delayBetweenRounds = 1f;
 
         [Header("Zone")]
-        [SerializeField]
-        private ReactionZone reactionZone;
-
-        [SerializeField]
-        private Transform leftBorder;
-
-        [SerializeField]
-        private Transform rightBorder;
+        [SerializeField] private ReactionZone reactionZone;
+        [SerializeField] private Transform leftBorder;
+        [SerializeField] private Transform rightBorder;
 
         [Header("Difficulty")]
-        [SerializeField]
-        private float startZoneWidth = 2.5f;
-
-        [SerializeField]
-        private float endZoneWidth = 0.7f;
-        
-        [SerializeField]
-        private float startParticlesRadius = 0.62f;
+        [SerializeField] private float startZoneWidth = 2.5f;
+        [SerializeField] private float endZoneWidth = 0.7f;
+        [SerializeField] private float startParticlesRadius = 0.62f;
 
         private int currentRound;
-
-        [SerializeField]private bool active;
-        
-        private bool waitingNextRound;
-
-        public ReactionZone Zone => reactionZone;
-
-        private void Awake()
-        {
-            Instance = this;
-        }
+        private bool active;
+        private bool waitingNext;
 
         public override void StartGame()
         {
             base.StartGame();
-            
-            waitingNextRound = false;
-
-            currentRound = 0;
 
             active = true;
+            waitingNext = false;
+            currentRound = 0;
 
             StartRound();
         }
@@ -65,24 +39,15 @@ namespace Minigames.Reaction
             base.StopGame();
 
             active = false;
-
-            CancelInvoke();
-
             reactionZone.ResetZone();
         }
 
         public void CheckHit()
         {
-            if (!active)
+            if (!active || waitingNext || reactionZone.IsTransitioning)
                 return;
 
-            if (waitingNextRound)
-                return;
-
-            if (reactionZone.IsTransitioning)
-                return;
-
-            waitingNextRound = true;
+            waitingNext = true;
 
             if (reactionZone.SellerInside)
             {
@@ -90,67 +55,38 @@ namespace Minigames.Reaction
 
                 if (currentRound >= roundsToWin)
                 {
-                    WinGame();
-
+                    Finish(true);
                     return;
                 }
 
-                Invoke(
-                    nameof(StartRound),
-                    delayBetweenRounds
-                );
+                Invoke(nameof(StartRound), delayBetweenRounds);
             }
             else
             {
-                LoseGame();
+                Finish(false);
             }
         }
 
         private void StartRound()
         {
-            waitingNextRound = false;
-            
-            float t =
-                (float)currentRound /
-                (roundsToWin - 1);
+            waitingNext = false;
 
-            float zoneWidth =
-                Mathf.Lerp(
-                    startZoneWidth,
-                    endZoneWidth,
-                    t
-                );
+            float t = (float)currentRound / (roundsToWin - 1);
+
+            float width = Mathf.Lerp(startZoneWidth, endZoneWidth, t);
 
             float minX = leftBorder.position.x;
             float maxX = rightBorder.position.x;
 
-            float particleWidth = startParticlesRadius * zoneWidth;
+            float x = Random.Range(minX + width * 0.5f, maxX - width * 0.5f);
 
-            float randomX =
-                Random.Range(
-                    minX + zoneWidth * 0.5f,
-                    maxX - zoneWidth * 0.5f
-                );
-
-            reactionZone.MoveTo(
-                randomX,
-                zoneWidth,
-                particleWidth
-            );
+            reactionZone.MoveTo(x, width, startParticlesRadius * width);
         }
-
-        private void WinGame()
+        
+        public override void BindSystems(MinigamePlayerSystems systems)
         {
-            active = false;
-
-            Finish(true);
-        }
-
-        private void LoseGame()
-        {
-            active = false;
-
-            Finish(false);
+            base.BindSystems(systems);
+            systems.EnableReaction(this);
         }
     }
 }
