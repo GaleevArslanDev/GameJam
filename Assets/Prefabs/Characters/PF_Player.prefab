@@ -129,6 +129,8 @@ GameObject:
   - component: {fileID: 6672764329720059313}
   - component: {fileID: 8437097857322035023}
   - component: {fileID: 2428737207285582723}
+  - component: {fileID: 1176251052365137221}
+  - component: {fileID: 392513369164218828}
   m_Layer: 0
   m_Name: PF_Player
   m_TagString: Player
@@ -225,7 +227,19 @@ MonoBehaviour:
     m_ActionId: 27c5f898-bc57-4ee1-8800-db469aca5fe3
     m_ActionName: 'Player/Crouch[/Keyboard/c]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5627133857805645051}
+        m_TargetAssemblyTypeName: Player.PlayerInputReader, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f1ba0d36-48eb-4cd5-b651-1c94a6531f70
     m_ActionName: 'Player/Jump[/Keyboard/space]'
   - m_PersistentCalls:
@@ -347,11 +361,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.PlayerMotor
   input: {fileID: 5627133857805645051}
+  slipState: {fileID: 392513369164218828}
   walkSpeed: 4
   sprintSpeed: 7
   acceleration: 10
   deceleration: 15
-  jumpForce: 5
+  jumpForce: 0
   gravity: -40
   fallMultiplier: 10
   groundedGravity: -2
@@ -375,6 +390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player.PlayerLook
   input: {fileID: 5627133857805645051}
   cameraRoot: {fileID: 6241967845145226911}
+  slipState: {fileID: 392513369164218828}
   sensitivity: 0.1
   minPitch: -80
   maxPitch: 80
@@ -401,7 +417,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025426938689194158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20168da2c8ba4d8894451ff0fd989672, type: 3}
   m_Name: 
@@ -415,7 +431,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025426938689194158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8897e0bb04ee430da84221c80144fc5e, type: 3}
   m_Name: 
@@ -449,12 +465,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025426938689194158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee569bbb74f6426e9c127942643a45be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Minigames.Reaction.ReactionInput
-  seller: {fileID: 0}
 --- !u!114 &2428737207285582723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,7 +477,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025426938689194158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31cb2e84aafe4894be6349e1fb713300, type: 3}
   m_Name: 
@@ -471,9 +486,104 @@ MonoBehaviour:
   backwardTile: {fileID: 0}
   leftTile: {fileID: 0}
   rightTile: {fileID: 0}
-  currentTile: {fileID: 0}
   moveSpeed: 14
+  returnSpeed: 8
+  playerY: 1
   centerPoint: {fileID: 0}
+--- !u!114 &1176251052365137221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025426938689194158}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9f55d2598296f40be617ba2f12e079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Minigames.HookGrab.HookGrabPlayer
+  moveSpeed: 5
+  maxDistance: 4
+  hookSpawn: {fileID: 1347887249778429433}
+  hookPrefab: {fileID: 7652812500498333141, guid: 4ba8311169aefea43be30a87f6c9bb51, type: 3}
+  seller: {fileID: 0}
+--- !u!114 &392513369164218828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025426938689194158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf797c457534a21b6511e07cac00882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player.PlayerSlipState
+  motor: {fileID: 5855328800385518998}
+  look: {fileID: 1491252033236869203}
+  input: {fileID: 5627133857805645051}
+  cameraRoot: {fileID: 6241967845145226911}
+  slipTime: 0.25
+  fallTime: 0.35
+  recoverTime: 5
+  maxTiltUp: 70
+  maxTiltDown: -80
+  cameraHeightDrop: 0.5
+  recoverSpeed: 6
+  slipCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fallCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  balance: 50
+  balanceDrain: 35
+  tapForce: 18
+  safeZoneMin: 40
+  safeZoneMax: 60
+  failPenalty: 0.5
 --- !u!1 &2131982180233439668
 GameObject:
   m_ObjectHideFlags: 0

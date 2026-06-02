@@ -1590,11 +1590,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_ActionId: 44b200b1-1557-4083-816c-b22cbdf77ddf
---- !u!4 &831884785 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1347887249778429433, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-  m_PrefabInstance: {fileID: 491470979844123022}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &873685736
 GameObject:
   m_ObjectHideFlags: 0
@@ -3690,45 +3685,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1491252033236869203, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: slipState
-      value: 
-      objectReference: {fileID: 491470979844123043}
-    - target: {fileID: 2019254269395769670, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2025426938689194158, guid: 50a3cd116e0046046ace33592f077144, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2428737207285582723, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: leftTile
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2428737207285582723, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2428737207285582723, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: rightTile
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2428737207285582723, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: centerPoint
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2428737207285582723, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: currentTile
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2428737207285582723, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: forwardTile
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2428737207285582723, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: backwardTile
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2671743786380843557, guid: 50a3cd116e0046046ace33592f077144, type: 3}
       propertyPath: m_Camera
@@ -3738,50 +3697,6 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1406914609}
-    - target: {fileID: 2671743786380843557, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671743786380843557, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671743786380843557, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 491470979844123038}
-    - target: {fileID: 2671743786380843557, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671743786380843557, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnJump
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671743786380843557, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Player.PlayerInputReader, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2671743786380843557, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4153243921230948031, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4600289648223635582, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: Target.TrackingTarget
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5855328800385518998, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: jumpForce
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5855328800385518998, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: slipState
-      value: 
-      objectReference: {fileID: 491470979844123043}
     - target: {fileID: 6423609725225706609, guid: 50a3cd116e0046046ace33592f077144, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3826,24 +3741,10 @@ PrefabInstance:
       propertyPath: globalVolume
       value: 
       objectReference: {fileID: 1525042944}
-    - target: {fileID: 8437097857322035023, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: seller
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8437097857322035023, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2025426938689194158, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 491470979844123042}
-    - targetCorrespondingSourceObject: {fileID: 2025426938689194158, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 491470979844123043}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50a3cd116e0046046ace33592f077144, type: 3}
 --- !u!1 &491470979844123023 stripped
 GameObject:
@@ -3910,17 +3811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee569bbb74f6426e9c127942643a45be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Minigames.Reaction.ReactionInput
---- !u!114 &491470979844123038 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5627133857805645051, guid: 50a3cd116e0046046ace33592f077144, type: 3}
-  m_PrefabInstance: {fileID: 491470979844123022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 491470979844123023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ed6b46b55da4f4c827ec2f73b1cdef3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Player.PlayerInputReader
 --- !u!114 &491470979844123041 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2428737207285582723, guid: 50a3cd116e0046046ace33592f077144, type: 3}
@@ -3932,11 +3822,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31cb2e84aafe4894be6349e1fb713300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Minigames.Rhythm.RhythmPlayerMover
---- !u!114 &491470979844123042
+--- !u!114 &491470979844123042 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1176251052365137221, guid: 50a3cd116e0046046ace33592f077144, type: 3}
+  m_PrefabInstance: {fileID: 491470979844123022}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491470979844123023}
   m_Enabled: 0
@@ -3944,16 +3833,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b9f55d2598296f40be617ba2f12e079, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Minigames.HookGrab.HookGrabPlayer
-  moveSpeed: 5
-  maxDistance: 4
-  hookSpawn: {fileID: 831884785}
-  hookPrefab: {fileID: 7652812500498333141, guid: 4ba8311169aefea43be30a87f6c9bb51, type: 3}
-  seller: {fileID: 0}
---- !u!114 &491470979844123043
+--- !u!114 &491470979844123043 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 392513369164218828, guid: 50a3cd116e0046046ace33592f077144, type: 3}
+  m_PrefabInstance: {fileID: 491470979844123022}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 491470979844123023}
   m_Enabled: 1
@@ -3961,71 +3844,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf797c457534a21b6511e07cac00882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player.PlayerSlipState
-  motor: {fileID: 491470979844123028}
-  look: {fileID: 491470979844123027}
-  input: {fileID: 491470979844123038}
-  cameraRoot: {fileID: 1748700584}
-  slipTime: 0.25
-  fallTime: 0.35
-  recoverTime: 5
-  maxTiltUp: 70
-  maxTiltDown: -80
-  cameraHeightDrop: 0.5
-  recoverSpeed: 6
-  slipCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  fallCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  balance: 50
-  balanceDrain: 35
-  tapForce: 18
-  safeZoneMin: 40
-  safeZoneMax: 60
-  failPenalty: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
