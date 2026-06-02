@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 using Shopping;
+using World;
 
 namespace Minigames.Core
 {
@@ -20,6 +21,10 @@ namespace Minigames.Core
 
         [Header("Arena")]
         [SerializeField] private Transform arenaSpawnPoint;
+        
+        [SerializeField] private DepartmentProduct departmentProduct;
+        
+        public DepartmentProduct DepartmentProduct => departmentProduct;
 
         private int currentPointIndex;
         private bool playerInside;

@@ -29,6 +29,18 @@ namespace World
         {
             if (!playerInside) return;
 
+            ProductInstance instance =
+                ShoppingManager.Instance.GetProduct(product);
+
+            if (instance == null)
+                return;
+
+            if (instance.Purchased)
+                return;
+
+            if (instance.DiscountResolved)
+                return;
+
             if (UnityEngine.InputSystem.Keyboard.current.eKey.wasPressedThisFrame)
             {
                 StartDiscount();
@@ -42,10 +54,24 @@ namespace World
 
         private void StartDiscount()
         {
-            if (Minigames.Core.MinigameController.Instance.IsBusy)
+            ProductInstance instance =
+                ShoppingManager.Instance.GetProduct(product);
+
+            if (instance == null)
                 return;
 
-            Minigames.Core.MinigameController.Instance.RequestStart(seller);
+            if (instance.Purchased)
+                return;
+
+            if (instance.DiscountResolved)
+                return;
+
+            if (MinigameController.Instance.IsBusy)
+                return;
+
+            MinigameController.Instance.RequestStart(
+                seller
+            );
         }
 
         private void TryBuy()
@@ -55,7 +81,10 @@ namespace World
 
         public void ApplyDiscountResult(bool success)
         {
-            ShoppingManager.Instance.RegisterDiscountResult(product, success);
+            ShoppingManager.Instance.RegisterDiscountResult(
+                product,
+                success
+            );
         }
     }
 }

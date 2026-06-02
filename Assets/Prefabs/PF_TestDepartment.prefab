@@ -73,6 +73,7 @@ GameObject:
   - component: {fileID: 4808083448009648288}
   - component: {fileID: 3047404903734117869}
   - component: {fileID: 4187978059384691152}
+  - component: {fileID: 8682397606157669639}
   m_Layer: 0
   m_Name: Seller
   m_TagString: Untagged
@@ -122,6 +123,7 @@ MonoBehaviour:
   reachDistance: 0.15
   loop: 1
   arenaSpawnPoint: {fileID: 1857385407667395539}
+  departmentProduct: {fileID: 8682397606157669639}
 --- !u!65 &4187978059384691152
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -143,6 +145,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.23, y: 1, z: 2.23}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8682397606157669639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5400429452281759801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d829db00ea94184b5665bc4c3871718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::World.DepartmentProduct
+  product: {fileID: 11400000, guid: 41e749093a977284291f521ed3de128f, type: 2}
+  seller: {fileID: 3047404903734117869}
 --- !u!1 &5667112346689574999
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +347,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6570487169054439620}
-  - component: {fileID: 5533876158984981333}
   - component: {fileID: 5986803144768818908}
   m_Layer: 0
   m_Name: PF_TestDepartment
@@ -358,20 +373,6 @@ Transform:
   - {fileID: 1857385407667395539}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5533876158984981333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6131083192574532196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d829db00ea94184b5665bc4c3871718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::World.DepartmentProduct
-  product: {fileID: 11400000, guid: 41e749093a977284291f521ed3de128f, type: 2}
-  seller: {fileID: 3047404903734117869}
 --- !u!65 &5986803144768818908
 BoxCollider:
   m_ObjectHideFlags: 0

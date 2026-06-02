@@ -8,6 +8,7 @@ using Player;
 using UnityEngine;
 using Unity.Cinemachine;
 using Minigames.UI;
+using Shopping;
 
 namespace Minigames.Core
 {
@@ -141,9 +142,25 @@ namespace Minigames.Core
             currentGame.StopGame();
             Destroy(currentGame.gameObject);
             
-            var dept = currentSeller.GetComponent<World.DepartmentProduct>();
+            var dept = currentSeller.DepartmentProduct;
+            
             if (dept != null)
+            {
                 dept.ApplyDiscountResult(success);
+
+                bool bought = ShoppingManager.Instance.TryBuy(
+                    currentSeller.Product
+                );
+
+                if (bought)
+                {
+                    dept.enabled = false;
+                }
+            }
+            else
+            {
+                Debug.LogError("No dept set in Seller.");
+            }
 
             resultUI.Show(success);
             
@@ -154,12 +171,10 @@ namespace Minigames.Core
             player.transform.position = savedPosition;
             controller.enabled = true;
 
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(2f);
 
-            // 1. DISABLE MINIGAME CAMERA
             resultUI.Hide();
             
-            // 3. RESTORE PLAYER CONTROL
             motor.SetControlEnabled(true);
             look.SetControlEnabled(true);
 

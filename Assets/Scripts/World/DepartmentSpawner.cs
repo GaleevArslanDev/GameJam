@@ -27,12 +27,6 @@ namespace World
                     point.position,
                     point.rotation
                 );
-
-                var dept = obj.GetComponent<DepartmentProduct>();
-                if (dept == null)
-                {
-                    Debug.LogError("DepartmentPrefab missing DepartmentProduct!");
-                }
             }
         }
     }

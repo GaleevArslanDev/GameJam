@@ -8,7 +8,7 @@ namespace Shopping
         [SerializeField]
         private float startMoney = 200;
 
-        private float money;
+        [SerializeField] private float money;
 
         public float CurrentMoney => money;
 
