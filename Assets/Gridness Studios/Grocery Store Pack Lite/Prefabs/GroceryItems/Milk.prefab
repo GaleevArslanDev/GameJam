@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1076273195536794657}
   - component: {fileID: 7831836325133715587}
   - component: {fileID: -305079561441306829}
+  - component: {fileID: -8826758532817146487}
   m_Layer: 0
   m_Name: Milk
   m_TagString: Untagged
@@ -113,3 +114,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3371799226304767270, guid: 21bd281347300ca4ba2a46bf7aedc61c, type: 3}
+--- !u!114 &-8826758532817146487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2683449937134882639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7355de7549512514db6a806b1ce0b2c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForceGPUInstancing

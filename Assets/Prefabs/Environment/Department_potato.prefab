@@ -611,6 +611,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_tomatoPack (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 6190806983624801119, guid: b395e080ea1944a478d77f658056a971, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9996599
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190806983624801119, guid: b395e080ea1944a478d77f658056a971, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.02607848
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190806983624801119, guid: b395e080ea1944a478d77f658056a971, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 2.989
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

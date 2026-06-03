@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3342892687386695552}
   - component: {fileID: 3967492219362561716}
   - component: {fileID: 65633246063814696}
+  - component: {fileID: -212971625411572221}
   m_Layer: 0
   m_Name: flask_coffee
   m_TagString: Untagged
@@ -113,3 +114,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1564239005933968121, guid: 9fc2551ee836ace45bd44b795b9fabbe, type: 3}
+--- !u!114 &-212971625411572221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886772027557337549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7355de7549512514db6a806b1ce0b2c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForceGPUInstancing

@@ -24,6 +24,8 @@ namespace Minigames.Core
         
         [SerializeField] private DepartmentProduct departmentProduct;
         
+        [SerializeField] private Animator animator;
+        
         public DepartmentProduct DepartmentProduct => departmentProduct;
 
         private int currentPointIndex;
@@ -40,7 +42,10 @@ namespace Minigames.Core
         private void Patrol()
         {
             if (patrolPoints == null || patrolPoints.Length < 2)
+            {
+                animator.SetFloat("Speed", 0);
                 return;
+            }
 
             Transform target = patrolPoints[currentPointIndex];
 
@@ -49,6 +54,8 @@ namespace Minigames.Core
                 target.position,
                 moveSpeed * Time.deltaTime
             );
+            
+            animator.SetFloat("Speed", moveSpeed);
 
             if (Vector3.Distance(transform.position, target.position) <= reachDistance)
             {
