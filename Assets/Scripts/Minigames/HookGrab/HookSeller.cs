@@ -29,12 +29,12 @@ namespace Minigames.HookGrab
 
         private void Update()
         {
-            animator.SetFloat(
-                "Speed",
-                paused
-                    ? 0
-                    : speed
-            );
+            //animator.SetFloat(
+                //"Speed",
+               // paused
+                   // ? 0
+                    //: speed
+            //);
             
             if (paused)
                 return;

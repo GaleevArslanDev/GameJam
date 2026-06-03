@@ -28,7 +28,7 @@ namespace Minigames.Throwing
                 direction = 1;
             }
             
-            animator.SetFloat("Side", direction);
+            //animator.SetFloat("Side", direction);
 
             transform.localPosition = pos;
         }

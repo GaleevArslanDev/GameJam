@@ -16,5 +16,5 @@ MonoBehaviour:
   BasePrice: 30
   DepartmentPrefab: {fileID: 33652754554328441, guid: 306e3376502117f40870d76b670457b8, type: 3}
   ThrowProjectilePrefab: {fileID: 4008468578534030988, guid: 76c91aa51aecde24ea9df8c61e5a9151, type: 3}
-  HookTargetPrefab: {fileID: 4008468578534030988, guid: dee06e22df2c81248a24f2cca32d1dc3, type: 3}
+  HookTargetPrefab: {fileID: 4008468578534030988, guid: 47c187a883058df4485b55846463cc93, type: 3}
   SellerVisualPrefab: {fileID: 7569977677811552398, guid: 12a8458b01e9472448b0b0a66aa891f1, type: 3}

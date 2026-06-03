@@ -23,7 +23,7 @@ namespace Minigames.Reaction
 
         private void Update()
         {
-            Vector3 pos = transform.position;
+            Vector3 pos = transform.localPosition;
 
             pos.x +=
                 direction *
@@ -44,9 +44,9 @@ namespace Minigames.Reaction
                 direction = 1;
             }
             
-            animator.SetFloat("Side", direction);
+            //animator.SetFloat("Side", direction);
 
-            transform.position = pos;
+            transform.localPosition = pos;
         }
     }
 }

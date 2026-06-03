@@ -19,15 +19,8 @@ namespace Minigames.Core
 
         public virtual void Initialize(MinigameContext context)
         {
-            GameObject current = Instantiate(
-                context.Seller.Product.SellerVisualPrefab,
-                sellerRoot
-            );
-
-            current.transform.localPosition = Vector3.zero;
-            current.transform.localRotation = Quaternion.identity;
-
-            Context = context;
+           
+           Context = context;
         }
 
         public virtual void StartGame()

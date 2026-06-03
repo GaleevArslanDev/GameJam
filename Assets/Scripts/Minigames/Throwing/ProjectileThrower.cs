@@ -53,7 +53,7 @@ namespace Minigames.Throwing
 
             UpdateAmmoUI();
 
-            animator.SetTrigger("Throw");
+            //animator.SetTrigger("Throw");
 
             GameObject obj = Instantiate(projectilePrefab, shootPoint.position, shootPoint.rotation);
 
