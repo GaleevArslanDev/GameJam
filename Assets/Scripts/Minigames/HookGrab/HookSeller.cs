@@ -12,6 +12,9 @@ namespace Minigames.HookGrab
 
         [SerializeField]
         private float maxX = 3f;
+        
+        [SerializeField]
+        private Animator animator;
 
         private int direction = 1;
 
@@ -26,6 +29,13 @@ namespace Minigames.HookGrab
 
         private void Update()
         {
+            animator.SetFloat(
+                "Speed",
+                paused
+                    ? 0
+                    : speed
+            );
+            
             if (paused)
                 return;
 

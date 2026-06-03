@@ -7,13 +7,18 @@ namespace Player
         [SerializeField] private Animator animator;
         [SerializeField] private PlayerMotor motor;
         [SerializeField] private PlayerInputReader input;
+        [SerializeField] private PlayerSlipState slipState;
+
+        private static readonly int SpeedHash =
+            Animator.StringToHash("Speed");
+
+        private static readonly int SprintHash =
+            Animator.StringToHash("Sprint");
+
+        private static readonly int SlipHash =
+            Animator.StringToHash("Slip");
 
         private void Update()
-        {
-            UpdateAnimator();
-        }
-
-        private void UpdateAnimator()
         {
             float speed =
                 new Vector2(
@@ -21,21 +26,19 @@ namespace Player
                     motor.MoveDirection.z
                 ).magnitude;
 
-            animator.SetFloat("Speed", speed);
-
-            animator.SetBool(
-                "IsGrounded",
-                motor.IsGrounded
-            );
-
             animator.SetFloat(
-                "VerticalVelocity",
-                motor.VerticalVelocity
+                SpeedHash,
+                speed
             );
 
             animator.SetBool(
-                "IsSprinting",
+                SprintHash,
                 input.SprintHeld
+            );
+
+            animator.SetBool(
+                SlipHash,
+                slipState.IsSlipping
             );
         }
     }

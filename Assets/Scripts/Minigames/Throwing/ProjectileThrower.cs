@@ -10,6 +10,7 @@ namespace Minigames.Throwing
         [SerializeField] private Transform shootPoint;
         [SerializeField] private float throwForce = 20f;
         [SerializeField] private int maxAmmo = 15;
+        [SerializeField] private Animator animator;
 
         private int ammo;
         private ThrowingGame game;
@@ -50,6 +51,8 @@ namespace Minigames.Throwing
             ammo--;
             
             UpdateAmmoUI();
+            
+            animator.SetTrigger("Throw");
 
             GameObject obj = Instantiate(projectilePrefab, shootPoint.position, shootPoint.rotation);
 
