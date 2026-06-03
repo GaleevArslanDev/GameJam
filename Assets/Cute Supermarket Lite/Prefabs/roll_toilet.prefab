@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3288269870832922608}
   - component: {fileID: 6673606481829281203}
   - component: {fileID: 1724934495925693929}
-  - component: {fileID: -3377605848412426006}
   - component: {fileID: 2968765872036162068}
   m_Layer: 0
   m_Name: roll_toilet
@@ -92,28 +91,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-3377605848412426006
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2580249621097652999}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8265581213175215200, guid: dcfcad261687d4e42ab55467e1144bee, type: 3}
 --- !u!114 &2968765872036162068
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9063962979015957742}
   - component: {fileID: 3201652844738937074}
   - component: {fileID: 2910401229550273905}
-  - component: {fileID: 9022543880727442374}
   - component: {fileID: 4144777114898899243}
   m_Layer: 0
   m_Name: Fruit_Case
@@ -92,28 +91,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &9022543880727442374
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2625504238672763322}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6226458267363791985, guid: 21bd281347300ca4ba2a46bf7aedc61c, type: 3}
 --- !u!114 &4144777114898899243
 MonoBehaviour:
   m_ObjectHideFlags: 0
