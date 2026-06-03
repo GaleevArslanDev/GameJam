@@ -113,6 +113,7 @@ namespace Minigames.HookGrab
             }
 
             currentDiscounts++;
+            Audio.AudioManager.Instance.PlayHit();
 
             if (currentDiscounts >= discountsNeeded)
             {
@@ -128,6 +129,7 @@ namespace Minigames.HookGrab
             if (!active) return;
 
             currentMisses++;
+            Audio.AudioManager.Instance.PlayMiss();
 
             if (currentMisses >= maxMisses)
                 Finish(false);

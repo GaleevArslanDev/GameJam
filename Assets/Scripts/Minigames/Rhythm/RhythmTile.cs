@@ -36,6 +36,7 @@ namespace Minigames.Rhythm
 
             meshRenderer.sharedMaterial = active;
 
+            Audio.AudioManager.Instance.PlayRhythmLight();
             game.EnableInput();
         }
 

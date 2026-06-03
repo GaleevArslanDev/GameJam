@@ -16,6 +16,14 @@ namespace Minigames.UI
         public void Show(bool success)
         {
             root.SetActive(true);
+            if (success)
+            {
+                Audio.AudioManager.Instance.PlayRoundWin();
+            }
+            else
+            {
+                Audio.AudioManager.Instance.PlayRoundLose();
+            }
 
             resultText.text = success
                 ? "DISCOUNT RECEIVED"

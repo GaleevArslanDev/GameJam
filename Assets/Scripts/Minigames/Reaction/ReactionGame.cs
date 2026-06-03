@@ -52,6 +52,8 @@ namespace Minigames.Reaction
             if (reactionZone.SellerInside)
             {
                 currentRound++;
+                
+                Audio.AudioManager.Instance.PlayHit();
 
                 if (currentRound >= roundsToWin)
                 {
@@ -63,6 +65,7 @@ namespace Minigames.Reaction
             }
             else
             {
+                Audio.AudioManager.Instance.PlayMiss();
                 Finish(false);
             }
         }

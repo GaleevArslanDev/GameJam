@@ -50,6 +50,7 @@ namespace Minigames.Throwing
             }
 
             ammo--;
+            Audio.AudioManager.Instance.PlayThrow();
 
             UpdateAmmoUI();
 

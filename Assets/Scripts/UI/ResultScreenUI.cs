@@ -48,6 +48,8 @@ namespace UI
         private void ShowWin()
         {
             root.SetActive(true);
+            Audio.AudioManager.Instance.PlayStatsPanel();
+            Audio.AudioManager.Instance.PlayVictory();
 
             titleText.text = "YOU WIN";
 
@@ -72,6 +74,8 @@ namespace UI
         {
             root.SetActive(true);
 
+            Audio.AudioManager.Instance.PlayStatsPanel();
+            Audio.AudioManager.Instance.PlayDefeat();
             titleText.text = "YOU LOSE";
 
             float usedTime =

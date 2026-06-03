@@ -12,16 +12,19 @@ namespace Minigames.UI
         public void UpdateHits(int current, int target)
         {
             hitsText.text = $"Hits: {current}/{target}";
+            Audio.AudioManager.Instance.PlayStatUpdate();
         }
 
         public void UpdateMisses(int current, int target)
         {
             missesText.text = $"Misses: {current}/{target}";
+            Audio.AudioManager.Instance.PlayStatUpdate();
         }
 
         public void UpdateAmmo(int current, int max)
         {
             ammoText.text = $"Ammo: {current}/{max}";
+            Audio.AudioManager.Instance.PlayStatUpdate();
         }
     }
 }

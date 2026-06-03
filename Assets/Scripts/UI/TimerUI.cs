@@ -20,6 +20,7 @@ namespace UI
 
         [SerializeField]
         private float dangerTime = 60f;
+        private bool warningPlayed;
 
         private void Update()
         {
@@ -41,6 +42,12 @@ namespace UI
                 time <= dangerTime
                     ? dangerColor
                     : normalColor;
+            
+            if (!warningPlayed && time <= 10f)
+            {
+                warningPlayed = true;
+                Audio.AudioManager.Instance.PlayTimerWarning();
+            }
         }
     }
 }

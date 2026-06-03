@@ -30,6 +30,7 @@ namespace Minigames.Throwing
             if (!active) return;
 
             hits++;
+            Audio.AudioManager.Instance.PlayHit();
             UpdateUI();
 
             if (hits >= hitsRequired)
@@ -41,6 +42,7 @@ namespace Minigames.Throwing
             if (!active) return;
 
             misses++;
+            Audio.AudioManager.Instance.PlayMiss();
             UpdateUI();
 
             if (misses >= maxMisses)

@@ -77,7 +77,10 @@ namespace World
 
         private void TryBuy()
         {
-            ShoppingManager.Instance.TryBuy(product);
+            if (ShoppingManager.Instance.TryBuy(product))
+            {
+                Audio.AudioManager.Instance.PlayPickup();
+            }
         }
 
         public void ApplyDiscountResult(bool success)

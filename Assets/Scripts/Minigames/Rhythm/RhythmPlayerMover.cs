@@ -100,6 +100,7 @@ namespace Minigames.Rhythm
             }
 
             targetTile = tile;
+            Audio.AudioManager.Instance.PlayRhythmJump();
 
             targetPosition = new Vector3(
                 tile.transform.position.x,

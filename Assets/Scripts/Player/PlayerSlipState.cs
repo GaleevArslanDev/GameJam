@@ -109,6 +109,8 @@ namespace Player
                 return;
 
             state = State.Slip;
+            
+            Audio.AudioManager.Instance.PlayFootstepWater();
 
             timer = 0f;
             recoverProgress = 0f;
@@ -180,6 +182,7 @@ namespace Player
 
             if (t >= 1f)
             {
+                Audio.AudioManager.Instance.PlaySlipFall();
                 state = State.Grounded;
             }
         }
@@ -232,6 +235,7 @@ namespace Player
             if (recoverProgress >= recoverTime)
             {
                 state = State.Recovering;
+                Audio.AudioManager.Instance.PlayGetUpStart();
                 timer = 0f;
             }
         }
@@ -264,6 +268,7 @@ namespace Player
 
         private void FinishRecovery()
         {
+            Audio.AudioManager.Instance.PlayGetUpEnd();
             state = State.None;
 
             pitch = 0f;
