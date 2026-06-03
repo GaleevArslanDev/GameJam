@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43453505d6b340c3a8db07e8c64019b7, type: 3}
+  m_Name: jam
+  m_EditorClassIdentifier: Assembly-CSharp::Shopping.ProductData
+  ProductName: "\u0414\u0436\u0435\u043C"
+  BasePrice: 30
+  DepartmentPrefab: {fileID: 33652754554328441, guid: 306e3376502117f40870d76b670457b8, type: 3}
+  ThrowProjectilePrefab: {fileID: 4008468578534030988, guid: 76c91aa51aecde24ea9df8c61e5a9151, type: 3}
+  HookTargetPrefab: {fileID: 4008468578534030988, guid: dee06e22df2c81248a24f2cca32d1dc3, type: 3}
+  SellerVisualPrefab: {fileID: 7569977677811552398, guid: 12a8458b01e9472448b0b0a66aa891f1, type: 3}

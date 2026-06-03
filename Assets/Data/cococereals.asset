@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43453505d6b340c3a8db07e8c64019b7, type: 3}
+  m_Name: cococereals
+  m_EditorClassIdentifier: Assembly-CSharp::Shopping.ProductData
+  ProductName: "\u0425\u043B\u043E\u043F\u044C\u044F"
+  BasePrice: 20
+  DepartmentPrefab: {fileID: 2383870639220638397, guid: 8c05e79e1034461438b9a7b5abbcbf14, type: 3}
+  ThrowProjectilePrefab: {fileID: 102057865630125702, guid: bff1d7ea79c00f049aecb0f93c9953b0, type: 3}
+  HookTargetPrefab: {fileID: 102057865630125702, guid: 1e990e856a122754b8386dd5b0d1d24e, type: 3}
+  SellerVisualPrefab: {fileID: 7577246230265102952, guid: 7a4b3c87bef42594593100c2a876a28e, type: 3}

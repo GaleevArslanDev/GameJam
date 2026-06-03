@@ -5,8 +5,10 @@ namespace Minigames.HookGrab
 {
     public class HookGrabGame : MinigameBase
     {
-        [Header("Targets")]
-        [SerializeField] private HookTarget[] targets;
+        [SerializeField]
+        private Transform[] spawnPoints;
+
+        private HookTarget[] targets;
 
         [Header("Game")]
         [SerializeField] private int discountsNeeded = 5;
@@ -28,10 +30,36 @@ namespace Minigames.HookGrab
             currentDiscounts = 0;
             currentMisses = 0;
 
-            foreach (var t in targets)
-                t.ResetTarget();
+            SpawnTargets();
 
             ActivateRandomTarget();
+        }
+
+        private void SpawnTargets()
+        {
+            GameObject prefab =
+                Context.Seller.Product.HookTargetPrefab;
+
+            targets =
+                new HookTarget[spawnPoints.Length];
+
+            for (int i = 0; i < spawnPoints.Length; i++)
+            {
+                GameObject obj =
+                    Instantiate(
+                        prefab,
+                        spawnPoints[i].position,
+                        spawnPoints[i].rotation,
+                        transform
+                    );
+
+                HookTarget target =
+                    obj.GetComponent<HookTarget>();
+
+                target.ResetTarget();
+
+                targets[i] = target;
+            }
         }
 
         public override void StopGame()
@@ -39,11 +67,14 @@ namespace Minigames.HookGrab
             base.StopGame();
 
             active = false;
-            
+
             CancelInvoke();
 
             foreach (var t in targets)
-                t.gameObject.SetActive(false);
+            {
+                if (t != null)
+                    Destroy(t.gameObject);
+            }
         }
 
         private void ActivateRandomTarget()
@@ -101,7 +132,7 @@ namespace Minigames.HookGrab
             if (currentMisses >= maxMisses)
                 Finish(false);
         }
-        
+
         public override void BindSystems(MinigamePlayerSystems systems)
         {
             base.BindSystems(systems);

@@ -6,7 +6,7 @@ namespace Minigames.Throwing
 {
     public class ProjectileThrower : MonoBehaviour
     {
-        [SerializeField] private GameObject projectilePrefab;
+        private GameObject projectilePrefab;
         [SerializeField] private Transform shootPoint;
         [SerializeField] private float throwForce = 20f;
         [SerializeField] private int maxAmmo = 15;
@@ -18,6 +18,7 @@ namespace Minigames.Throwing
         public void Init(ThrowingGame g)
         {
             game = g;
+            projectilePrefab = g.Context.Seller.Product.ThrowProjectilePrefab;
         }
 
         private void OnEnable()
@@ -25,7 +26,7 @@ namespace Minigames.Throwing
             ammo = maxAmmo;
             UpdateAmmoUI();
         }
-        
+
         private void UpdateAmmoUI()
         {
             if (game == null)
@@ -49,9 +50,9 @@ namespace Minigames.Throwing
             }
 
             ammo--;
-            
+
             UpdateAmmoUI();
-            
+
             animator.SetTrigger("Throw");
 
             GameObject obj = Instantiate(projectilePrefab, shootPoint.position, shootPoint.rotation);

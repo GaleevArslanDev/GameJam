@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43453505d6b340c3a8db07e8c64019b7, type: 3}
-  m_Name: TestProduct
+  m_Name: Watermelon 13
   m_EditorClassIdentifier: Assembly-CSharp::Shopping.ProductData
   ProductName: "\u0410\u0440\u0431\u0443\u0437"
-  BasePrice: 20
-  DepartmentPrefab: {fileID: 6131083192574532196, guid: 29ae8a3fa9c7eb340a8b124b1f08b6c7, type: 3}
+  BasePrice: 35
+  DepartmentPrefab: {fileID: 6717922834946224102, guid: 5c6f733f917abe74dafc196739f3267b, type: 3}
+  ThrowProjectilePrefab: {fileID: 1613769841287687326, guid: 1a2f1009b2618554faf22b6ba83eb476, type: 3}
+  HookTargetPrefab: {fileID: 0}
+  SellerVisualPrefab: {fileID: 2492654208266120835, guid: 919fd4029dcf35e4d9d741520c9eb7e7, type: 3}

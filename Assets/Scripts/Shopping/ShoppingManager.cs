@@ -53,36 +53,18 @@ namespace Shopping
         private void Start()
         {
             wallet.Initialize(startMoney);
-
-            GenerateShoppingList();
         }
 
-        private void GenerateShoppingList()
+        public void InitializeProducts(
+            List<ProductData> products
+        )
         {
             activeProducts.Clear();
 
-            List<ProductData> source =
-                catalog.Products.ToList();
-
-            for (
-                int i = 0;
-                i < productsToChoose;
-                i++
-            )
+            foreach (ProductData product in products)
             {
-                int index =
-                    UnityEngine.Random.Range(
-                        0,
-                        source.Count
-                    );
-
-                ProductData data =
-                    source[index];
-
-                source.RemoveAt(index);
-
                 activeProducts.Add(
-                    new ProductInstance(data)
+                    new ProductInstance(product)
                 );
             }
 

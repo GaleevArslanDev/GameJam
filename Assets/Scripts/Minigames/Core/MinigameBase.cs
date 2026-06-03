@@ -10,6 +10,7 @@ namespace Minigames.Core
         [SerializeField] protected Transform playerPoint;
         [SerializeField] protected Transform lookAtPoint;
         [SerializeField] protected GameObject root;
+        [SerializeField] protected Transform sellerRoot;
 
         public MinigameContext Context { get; protected set; }
 
@@ -18,6 +19,14 @@ namespace Minigames.Core
 
         public virtual void Initialize(MinigameContext context)
         {
+            GameObject current = Instantiate(
+                context.Seller.Product.SellerVisualPrefab,
+                sellerRoot
+            );
+
+            current.transform.localPosition = Vector3.zero;
+            current.transform.localRotation = Quaternion.identity;
+
             Context = context;
         }
 

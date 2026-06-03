@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43453505d6b340c3a8db07e8c64019b7, type: 3}
+  m_Name: donut
+  m_EditorClassIdentifier: Assembly-CSharp::Shopping.ProductData
+  ProductName: "\u041F\u043E\u043D\u0447\u0438\u043A"
+  BasePrice: 25
+  DepartmentPrefab: {fileID: 6493818443222252431, guid: cdee18fc3edd0d7499c14d8129f5a23d, type: 3}
+  ThrowProjectilePrefab: {fileID: 7253298302694123796, guid: 34c7254b3b679724ea23778cc8ee5044, type: 3}
+  HookTargetPrefab: {fileID: 7253298302694123796, guid: a857ec3e6ef922843bfea771a94540ba, type: 3}
+  SellerVisualPrefab: {fileID: 2946175142530696794, guid: 70792cc02e71ea545b6eca7537f98663, type: 3}

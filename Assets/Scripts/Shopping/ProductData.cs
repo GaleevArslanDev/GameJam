@@ -16,5 +16,12 @@ namespace Shopping
 
         [Header("Department")]
         public GameObject DepartmentPrefab;
+
+        [Header("Minigames")]
+        public GameObject ThrowProjectilePrefab;
+        public GameObject HookTargetPrefab;
+
+        [Header("Seller Visual")]
+        public GameObject SellerVisualPrefab;
     }
 }
