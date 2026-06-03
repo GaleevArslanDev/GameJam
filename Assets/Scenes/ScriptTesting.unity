@@ -1407,8 +1407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3cc427028d42bf922cd88c70a21a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::World.DepartmentSpawner
-  spawnPoints:
-  - {fileID: 505429230}
 --- !u!4 &670378970
 Transform:
   m_ObjectHideFlags: 0

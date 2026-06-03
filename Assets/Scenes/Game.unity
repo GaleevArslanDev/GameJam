@@ -3332,14 +3332,6 @@ PrefabInstance:
       value: PF_Shopasistant
       objectReference: {fileID: 0}
     - target: {fileID: 6562455528417470094, guid: 70792cc02e71ea545b6eca7537f98663, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 99.999985
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562455528417470094, guid: 70792cc02e71ea545b6eca7537f98663, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 100.000015
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562455528417470094, guid: 70792cc02e71ea545b6eca7537f98663, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4138,7 +4130,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 2011459414}
   departmentProduct: {fileID: 127492521}
-  animator: {fileID: 0}
 --- !u!1 &132044931
 GameObject:
   m_ObjectHideFlags: 0
@@ -6025,7 +6016,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 2036991130}
   departmentProduct: {fileID: 181641429}
-  animator: {fileID: 0}
 --- !u!1001 &188769566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9496,7 +9486,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 1605836648}
   departmentProduct: {fileID: 303920169}
-  animator: {fileID: 0}
 --- !u!1 &310002704
 GameObject:
   m_ObjectHideFlags: 0
@@ -12967,7 +12956,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 1324873682}
   departmentProduct: {fileID: 472833428}
-  animator: {fileID: 0}
 --- !u!65 &472833431
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13421,14 +13409,6 @@ PrefabInstance:
       value: PF_Shopasistant
       objectReference: {fileID: 0}
     - target: {fileID: 6562455528417470094, guid: 70792cc02e71ea545b6eca7537f98663, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 99.999985
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562455528417470094, guid: 70792cc02e71ea545b6eca7537f98663, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 100.000015
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562455528417470094, guid: 70792cc02e71ea545b6eca7537f98663, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -13614,14 +13594,6 @@ PrefabInstance:
     - target: {fileID: 2946175142530696794, guid: 70792cc02e71ea545b6eca7537f98663, type: 3}
       propertyPath: m_Name
       value: PF_Shopasistant
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562455528417470094, guid: 70792cc02e71ea545b6eca7537f98663, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 99.999985
-      objectReference: {fileID: 0}
-    - target: {fileID: 6562455528417470094, guid: 70792cc02e71ea545b6eca7537f98663, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 100.000015
       objectReference: {fileID: 0}
     - target: {fileID: 6562455528417470094, guid: 70792cc02e71ea545b6eca7537f98663, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13896,7 +13868,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 1777834545}
   departmentProduct: {fileID: 492590196}
-  animator: {fileID: 0}
 --- !u!1001 &496008940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15038,7 +15009,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 1757998367}
   departmentProduct: {fileID: 514239716}
-  animator: {fileID: 0}
 --- !u!1001 &531603273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22375,7 +22345,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 136695808}
   departmentProduct: {fileID: 731293991}
-  animator: {fileID: 0}
 --- !u!1 &734451245
 GameObject:
   m_ObjectHideFlags: 0
@@ -23850,7 +23819,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 1764273665}
   departmentProduct: {fileID: 757392598}
-  animator: {fileID: 0}
 --- !u!65 &757392601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29893,7 +29861,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 1201574554}
   departmentProduct: {fileID: 993466150}
-  animator: {fileID: 0}
 --- !u!1 &999360407
 GameObject:
   m_ObjectHideFlags: 0
@@ -43310,7 +43277,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 208073727}
   departmentProduct: {fileID: 1486124443}
-  animator: {fileID: 0}
 --- !u!1 &1492407753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4917684758937959451, guid: f1ee9b392841fb046a6b0a9b08a44aff, type: 3}
@@ -46962,7 +46928,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 855259565}
   departmentProduct: {fileID: 1637844678}
-  animator: {fileID: 0}
 --- !u!65 &1637844681
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53819,7 +53784,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 91475422}
   departmentProduct: {fileID: 1832643605}
-  animator: {fileID: 0}
 --- !u!65 &1832643608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56332,7 +56296,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 642417206}
   departmentProduct: {fileID: 1898763695}
-  animator: {fileID: 0}
 --- !u!1 &1906408097
 GameObject:
   m_ObjectHideFlags: 0
@@ -61113,7 +61076,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 332576387}
   departmentProduct: {fileID: 2074984381}
-  animator: {fileID: 0}
 --- !u!65 &2074984384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61587,7 +61549,6 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 1824121074}
   departmentProduct: {fileID: 2093143404}
-  animator: {fileID: 0}
 --- !u!65 &2093143407
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63057,6 +63018,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4768309779174062830, guid: 12a8458b01e9472448b0b0a66aa891f1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cf02384ba80193046b419bd3c532d674, type: 2}
     - target: {fileID: 7569977677811552398, guid: 12a8458b01e9472448b0b0a66aa891f1, type: 3}
       propertyPath: m_Name
       value: PF_shopassistent689
