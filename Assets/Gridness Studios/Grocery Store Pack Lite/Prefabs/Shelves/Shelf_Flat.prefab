@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3154703950468800305}
   - component: {fileID: 6972767398239183194}
   - component: {fileID: 8412306326311670521}
-  - component: {fileID: 459611817651713995}
   - component: {fileID: 2161183687811422199}
   m_Layer: 0
   m_Name: Shelf_Flat
@@ -92,28 +91,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &459611817651713995
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4710277016660893692}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1751560953917308327, guid: 21bd281347300ca4ba2a46bf7aedc61c, type: 3}
 --- !u!114 &2161183687811422199
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -124,6 +124,7 @@ MonoBehaviour:
   loop: 1
   arenaSpawnPoint: {fileID: 1857385407667395539}
   departmentProduct: {fileID: 8682397606157669639}
+  animator: {fileID: 0}
 --- !u!65 &4187978059384691152
 BoxCollider:
   m_ObjectHideFlags: 0
