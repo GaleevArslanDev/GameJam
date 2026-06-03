@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2009398833688933354}
   - component: {fileID: 3588558903594281666}
   - component: {fileID: 6750446372899806409}
+  - component: {fileID: 8492590866187287628}
   - component: {fileID: 1315475286309107876}
   m_Layer: 0
   m_Name: apple_green
@@ -91,6 +92,18 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8492590866187287628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4771479405953594038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7355de7549512514db6a806b1ce0b2c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ForceGPUInstancing
 --- !u!64 &1315475286309107876
 MeshCollider:
   m_ObjectHideFlags: 0
