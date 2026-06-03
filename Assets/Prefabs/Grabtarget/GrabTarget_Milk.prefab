@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7831836325133715587}
   - component: {fileID: -8826758532817146487}
   - component: {fileID: -4715030961122968741}
+  - component: {fileID: -3404216218443733272}
   m_Layer: 0
   m_Name: GrabTarget_Milk
   m_TagString: Untagged
@@ -126,3 +127,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3371799226304767270, guid: 21bd281347300ca4ba2a46bf7aedc61c, type: 3}
+--- !u!114 &-3404216218443733272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2683449937134882639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987c5f17ff563774d9757ac90c9f39b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Minigames.HookGrab.HookTarget
+  targetRenderer: {fileID: 7831836325133715587}
+  idleMaterial: {fileID: 2100000, guid: 4ac9d9725fecdc6408ffe8f538943c61, type: 2}
+  activeMaterial: {fileID: 2100000, guid: 9befc0071bac3ff4784109d010cbc6ad, type: 2}

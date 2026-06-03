@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8492036387458863327}
   - component: {fileID: 2265347639149811463}
   - component: {fileID: 7326358171383097178}
+  - component: {fileID: -1812246324904572341}
   m_Layer: 0
   m_Name: GrabTarget_ChocolateBar
   m_TagString: Untagged
@@ -113,3 +114,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6731052039867771193, guid: 21bd281347300ca4ba2a46bf7aedc61c, type: 3}
+--- !u!114 &-1812246324904572341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7173065458075834209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987c5f17ff563774d9757ac90c9f39b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Minigames.HookGrab.HookTarget
+  targetRenderer: {fileID: 2265347639149811463}
+  idleMaterial: {fileID: 2100000, guid: 4ac9d9725fecdc6408ffe8f538943c61, type: 2}
+  activeMaterial: {fileID: 2100000, guid: 9befc0071bac3ff4784109d010cbc6ad, type: 2}

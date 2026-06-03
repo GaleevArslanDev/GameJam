@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3967492219362561716}
   - component: {fileID: -212971625411572221}
   - component: {fileID: -8500131299349603722}
+  - component: {fileID: -1993572440109383457}
   m_Layer: 0
   m_Name: GrabTarget_flask_coffee
   m_TagString: Untagged
@@ -126,3 +127,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1564239005933968121, guid: 9fc2551ee836ace45bd44b795b9fabbe, type: 3}
+--- !u!114 &-1993572440109383457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886772027557337549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 987c5f17ff563774d9757ac90c9f39b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Minigames.HookGrab.HookTarget
+  targetRenderer: {fileID: 3967492219362561716}
+  idleMaterial: {fileID: 2100000, guid: 5782d4e8023551544b5b1f998ee5cc0f, type: 2}
+  activeMaterial: {fileID: 2100000, guid: 6ad709a5e6989a4418e2640510d2ae15, type: 2}

@@ -8,6 +8,7 @@ namespace World
     {
         [SerializeField] private ProductData product;
         [SerializeField] private SellerNPC seller;
+        public GameObject root;
 
         private bool playerInside;
 

@@ -29,7 +29,7 @@ namespace World
                 {
                     bool active = i == index;
 
-                    row.Shelves[i].gameObject.SetActive(active);
+                    row.Shelves[i].root.SetActive(active);
 
                     if (active)
                     {
