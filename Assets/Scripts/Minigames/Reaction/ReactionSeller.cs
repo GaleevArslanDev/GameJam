@@ -12,6 +12,9 @@ namespace Minigames.Reaction
 
         [SerializeField]
         private float maxX = 4f;
+        
+        [SerializeField]
+        private Animator animator;
 
         private int direction = 1;
 
@@ -40,6 +43,8 @@ namespace Minigames.Reaction
 
                 direction = 1;
             }
+            
+            animator.SetFloat("Side", direction);
 
             transform.position = pos;
         }

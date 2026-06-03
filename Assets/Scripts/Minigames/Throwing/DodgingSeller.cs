@@ -7,6 +7,7 @@ namespace Minigames.Throwing
         [SerializeField] private float speed = 4f;
         [SerializeField] private float minX = -4f;
         [SerializeField] private float maxX = 4f;
+        [SerializeField] private Animator animator;
 
         private int direction = 1;
 
@@ -26,6 +27,8 @@ namespace Minigames.Throwing
                 pos.x = minX;
                 direction = 1;
             }
+            
+            animator.SetFloat("Side", direction);
 
             transform.localPosition = pos;
         }

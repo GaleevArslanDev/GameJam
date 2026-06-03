@@ -17,6 +17,9 @@ namespace Minigames.HookGrab
         [SerializeField]
         private HookProjectile hookPrefab;
         
+        [SerializeField]
+        private Animator animator;
+        
         [HideInInspector]
         public HookSeller seller;
 
@@ -113,6 +116,8 @@ namespace Minigames.HookGrab
                     );
 
                 hook.Init(this, seller, game);
+                
+                animator.SetTrigger("Shoot");
 
                 canShoot = false;
             }
