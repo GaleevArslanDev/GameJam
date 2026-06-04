@@ -8302,11 +8302,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1094130904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163bff81d49b3d440a12f5a7787214c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 876a70e00d8d3364fadc149c39e8c67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  buttonType: 0
-  sceneToLoadAsset: {fileID: 102900000, guid: 47f12cd3683eb574197cb834150076f3, type: 3}
+  buttonAction: 0
+  sceneName: Game
 --- !u!1001 &1106551587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15291,11 +15291,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2020399680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163bff81d49b3d440a12f5a7787214c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 876a70e00d8d3364fadc149c39e8c67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuButton
-  buttonType: 1
-  sceneToLoadAsset: {fileID: 0}
+  buttonAction: 1
+  sceneName: Game
 --- !u!1001 &2023775606
 PrefabInstance:
   m_ObjectHideFlags: 0
