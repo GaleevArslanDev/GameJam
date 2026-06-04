@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 47f12cd3683eb574197cb834150076f3
+  m_OcclusionCullingData: {fileID: 36300000, guid: 8048577f3b8d35e4b98c9b2aa2276489, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -238,6 +238,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -655,6 +659,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrier (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 140635786023750318, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 371571747354308597, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.57534
@@ -717,6 +725,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling_Flat_Light
       objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.8277397
@@ -773,6 +785,10 @@ PrefabInstance:
     - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_Name
       value: Ceiling_Flat_Light (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -862,6 +878,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.26226
@@ -949,6 +969,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1394,6 +1422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.26226
@@ -1492,6 +1524,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5722599
@@ -1553,6 +1589,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1927,6 +1967,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.94226
@@ -1983,6 +2027,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2115,6 +2167,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2258,6 +2318,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_shelf (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.75841
@@ -2324,6 +2392,10 @@ PrefabInstance:
     - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_Name
       value: Ceiling_Flat_Light (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2422,6 +2494,10 @@ PrefabInstance:
     - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2754,6 +2830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.z
       value: -0.20387
@@ -2892,6 +2972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrier (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 140635786023750318, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 371571747354308597, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.5053399
@@ -2948,6 +3032,10 @@ PrefabInstance:
     - target: {fileID: 140635786023750318, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
       propertyPath: m_Name
       value: Barrier (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 140635786023750318, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 371571747354308597, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3094,6 +3182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.13774
@@ -3150,6 +3242,10 @@ PrefabInstance:
     - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
@@ -3215,7 +3311,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &430544164
 Transform:
@@ -3348,6 +3444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.6077404
@@ -3404,6 +3504,10 @@ PrefabInstance:
     - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
@@ -3614,6 +3718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0212
@@ -3803,6 +3911,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5722599
@@ -3859,6 +3971,10 @@ PrefabInstance:
     - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_Name
       value: Ceiling_Flat_Light (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4100,6 +4216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.04226
@@ -4156,6 +4276,10 @@ PrefabInstance:
     - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
@@ -4222,6 +4346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.6077404
@@ -4279,6 +4407,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling_Flat_Light (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.17226
@@ -4335,6 +4467,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4480,6 +4620,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_shelf (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.76159
@@ -4617,6 +4765,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_shelf (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.27841
@@ -4715,6 +4871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.6077404
@@ -4771,6 +4931,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5067,6 +5235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.74774
@@ -5160,6 +5332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0212
@@ -5231,6 +5407,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_shelf (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.77841
@@ -5292,6 +5476,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5409,6 +5597,10 @@ PrefabInstance:
     - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_Name
       value: Ceiling_Flat_Light (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5542,7 +5734,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &698502422
 Transform:
@@ -5703,6 +5895,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_shelf (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.62841
@@ -5764,6 +5964,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5961,6 +6169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling_Flat_Light (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.08774
@@ -6155,6 +6367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling_Flat_Light (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.2722597
@@ -6216,6 +6432,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6593,6 +6817,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling_Flat_Light (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.2722597
@@ -6649,6 +6877,10 @@ PrefabInstance:
     - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6707,6 +6939,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.0622602
@@ -6763,6 +6999,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6852,6 +7092,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5722599
@@ -6908,6 +7152,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7122,6 +7374,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7346,6 +7602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.z
       value: -0.20387
@@ -7478,6 +7738,10 @@ PrefabInstance:
     - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
@@ -7743,6 +8007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling_Flat_Light (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.17226
@@ -7804,6 +8072,10 @@ PrefabInstance:
     - target: {fileID: 4546341389574700552, guid: f2a0404ed85029f4bbdb1185d15522e6, type: 3}
       propertyPath: m_Name
       value: Cachier (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4546341389574700552, guid: f2a0404ed85029f4bbdb1185d15522e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7837310535228785199, guid: f2a0404ed85029f4bbdb1185d15522e6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8071,6 +8343,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_shelf (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.83841
@@ -8137,6 +8417,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8265,6 +8553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.26226
@@ -8321,6 +8613,10 @@ PrefabInstance:
     - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
@@ -8485,6 +8781,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.78226
@@ -8541,6 +8841,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8604,6 +8912,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cachier
       objectReference: {fileID: 0}
+    - target: {fileID: 4546341389574700552, guid: f2a0404ed85029f4bbdb1185d15522e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7837310535228785199, guid: f2a0404ed85029f4bbdb1185d15522e6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.8446603
@@ -8660,6 +8972,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8938,6 +9254,10 @@ PrefabInstance:
     - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
@@ -9348,6 +9668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.78226
@@ -9404,6 +9728,10 @@ PrefabInstance:
     - target: {fileID: 140635786023750318, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
       propertyPath: m_Name
       value: Barrier (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 140635786023750318, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 371571747354308597, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9589,6 +9917,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cachier (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4546341389574700552, guid: f2a0404ed85029f4bbdb1185d15522e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7837310535228785199, guid: f2a0404ed85029f4bbdb1185d15522e6, type: 3}
       propertyPath: m_LocalScale.x
       value: -1.3340598
@@ -9670,7 +10002,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1130994259
 Transform:
@@ -9848,6 +10180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.74774
@@ -9936,6 +10272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.78226
@@ -9992,6 +10332,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10050,6 +10394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.78226
@@ -10107,6 +10455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.6077404
@@ -10163,6 +10515,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10257,6 +10613,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.94226
@@ -10313,6 +10673,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10402,6 +10766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0212
@@ -10466,6 +10834,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10557,6 +10929,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10751,6 +11127,10 @@ PrefabInstance:
     - target: {fileID: 140635786023750318, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
       propertyPath: m_Name
       value: Barrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 140635786023750318, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 371571747354308597, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11032,6 +11412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.12226
@@ -11088,6 +11472,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11275,6 +11667,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.74774
@@ -11336,6 +11732,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11399,6 +11803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.19226
@@ -11460,6 +11868,10 @@ PrefabInstance:
     - target: {fileID: 2228384658553931214, guid: 3ac8934d10cd56a478aafa54a3f6527a, type: 3}
       propertyPath: m_Name
       value: Ceiling_Flat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2228384658553931214, guid: 3ac8934d10cd56a478aafa54a3f6527a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5673045923779321326, guid: 3ac8934d10cd56a478aafa54a3f6527a, type: 3}
       propertyPath: m_LocalScale.x
@@ -11630,6 +12042,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.26226
@@ -11690,7 +12106,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1309489384
 Transform:
@@ -11830,7 +12246,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -11969,6 +12385,10 @@ PrefabInstance:
     - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.z
@@ -12583,6 +13003,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_shelf (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.22159
@@ -12644,6 +13072,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13094,6 +13526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.15226
@@ -13457,6 +13893,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.z
       value: -0.20387
@@ -13522,6 +13962,10 @@ PrefabInstance:
     - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
@@ -13659,6 +14103,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_shelf (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.77841
@@ -13724,7 +14176,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1515356439
 Transform:
@@ -13773,6 +14225,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13831,6 +14287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5722599
@@ -13887,6 +14347,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14155,6 +14623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrier (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 140635786023750318, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 371571747354308597, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.05534
@@ -14353,6 +14825,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14714,6 +15190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.z
       value: -0.20387
@@ -14883,6 +15363,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrier (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 140635786023750318, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 371571747354308597, guid: 2ce77dc051252804fb6550c2ae630477, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.59534
@@ -14949,6 +15433,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15149,6 +15637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling_Flat_Light (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.08774
@@ -15210,6 +15702,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15514,6 +16010,10 @@ PrefabInstance:
     - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_Name
       value: Ceiling_Flat_Light (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15851,6 +16351,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.26226
@@ -15907,6 +16411,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16089,6 +16597,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0212
@@ -16215,6 +16727,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5722599
@@ -16321,6 +16837,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_shelf (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.75841
@@ -16387,6 +16911,10 @@ PrefabInstance:
     - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_Name
       value: Ceiling_Flat_Light (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16889,6 +17417,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_shelf (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.76159
@@ -17291,6 +17827,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cachier (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4546341389574700552, guid: f2a0404ed85029f4bbdb1185d15522e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7837310535228785199, guid: f2a0404ed85029f4bbdb1185d15522e6, type: 3}
       propertyPath: m_LocalScale.x
       value: -1.3340598
@@ -17583,6 +18123,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_shelf (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.83841
@@ -17679,7 +18227,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1913664110
 Transform:
@@ -17728,6 +18276,10 @@ PrefabInstance:
     - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_Name
       value: Ceiling_Flat_Light (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17785,6 +18337,10 @@ PrefabInstance:
     - target: {fileID: 4546341389574700552, guid: f2a0404ed85029f4bbdb1185d15522e6, type: 3}
       propertyPath: m_Name
       value: Cachier (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4546341389574700552, guid: f2a0404ed85029f4bbdb1185d15522e6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7837310535228785199, guid: f2a0404ed85029f4bbdb1185d15522e6, type: 3}
       propertyPath: m_LocalScale.x
@@ -17862,7 +18418,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1937274980
 Transform:
@@ -17911,6 +18467,10 @@ PrefabInstance:
     - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17979,6 +18539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.1
@@ -18035,6 +18599,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18186,6 +18754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0212
@@ -18283,6 +18855,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ceiling_Flat_Light (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5111005216931766021, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5822000236611960492, guid: 464403cdea4193b4087dfc659116c6cb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.2722597
@@ -18371,6 +18947,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.74774
@@ -18433,6 +19013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0212
@@ -18494,6 +19078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.41226
@@ -18550,6 +19138,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18745,6 +19337,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_shelf (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5815902
@@ -18806,6 +19406,10 @@ PrefabInstance:
     - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.z
@@ -19118,6 +19722,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Squared_Gray (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.26226
@@ -19171,9 +19779,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 110352920}
     m_Modifications:
+    - target: {fileID: 238810416978826953, guid: 040ee1e74a313c8459306139f9d93f83, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2168063794523927454, guid: 040ee1e74a313c8459306139f9d93f83, type: 3}
       propertyPath: m_Name
       value: Wall_Flat_Green_HalfDetail_Doored (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168063794523927454, guid: 040ee1e74a313c8459306139f9d93f83, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2962304979446349808, guid: 040ee1e74a313c8459306139f9d93f83, type: 3}
       propertyPath: m_LocalScale.z
@@ -19339,6 +19955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0212
@@ -19430,6 +20050,10 @@ PrefabInstance:
     - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_Name
       value: Floor_Squared_Gray (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4742229715554491393, guid: 6219a9312b10bb4419651714baed1075, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7157451875005359590, guid: 6219a9312b10bb4419651714baed1075, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19553,6 +20177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Green_HalfDetail (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 3893282762972233077, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6924463569268691509, guid: 1abc0a3eb77d77744bf2bda259b7e357, type: 3}
       propertyPath: m_LocalScale.z
       value: -0.20387
@@ -19610,9 +20238,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 110352920}
     m_Modifications:
+    - target: {fileID: 238810416978826953, guid: 040ee1e74a313c8459306139f9d93f83, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2168063794523927454, guid: 040ee1e74a313c8459306139f9d93f83, type: 3}
       propertyPath: m_Name
       value: Wall_Flat_Green_HalfDetail_Doored
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168063794523927454, guid: 040ee1e74a313c8459306139f9d93f83, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2962304979446349808, guid: 040ee1e74a313c8459306139f9d93f83, type: 3}
       propertyPath: m_LocalScale.z
@@ -20299,6 +20935,14 @@ PrefabInstance:
     - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_Name
       value: PF_shelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024605979852434635, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411448816830131336, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
       propertyPath: m_LocalPosition.x
