@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 3967492219362561716}
   - component: {fileID: -212971625411572221}
   - component: {fileID: 7474011332562096912}
-  - component: {fileID: -8500131299349603722}
   - component: {fileID: -8618926501179433555}
+  - component: {fileID: -2091628332960150040}
   m_Layer: 0
   m_Name: Projectile_flask_coffee
   m_TagString: Untagged
@@ -133,8 +133,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &-8500131299349603722
-MeshCollider:
+--- !u!114 &-8618926501179433555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886772027557337549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c148706e8f27410388e90c5e5710bf0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Minigames.Throwing.Projectile
+--- !u!135 &-2091628332960150040
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -151,19 +163,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1564239005933968121, guid: 9fc2551ee836ace45bd44b795b9fabbe, type: 3}
---- !u!114 &-8618926501179433555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3886772027557337549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c148706e8f27410388e90c5e5710bf0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Minigames.Throwing.Projectile
+  serializedVersion: 3
+  m_Radius: 1.3585277
+  m_Center: {x: 0, y: 1.3585277, z: 0}

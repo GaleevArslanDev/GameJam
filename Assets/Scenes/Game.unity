@@ -4433,7 +4433,7 @@ MonoBehaviour:
   moveSpeed: 2
   reachDistance: 0.15
   loop: 1
-  arenaSpawnPoint: {fileID: 2011459414}
+  arenaSpawnPoint: {fileID: 208073727}
   departmentProduct: {fileID: 127492521}
 --- !u!1 &132044931
 GameObject:
@@ -6319,7 +6319,7 @@ MonoBehaviour:
   moveSpeed: 2
   reachDistance: 0.15
   loop: 1
-  arenaSpawnPoint: {fileID: 2036991130}
+  arenaSpawnPoint: {fileID: 208073727}
   departmentProduct: {fileID: 181641429}
 --- !u!1001 &188769566
 PrefabInstance:
@@ -9789,7 +9789,7 @@ MonoBehaviour:
   moveSpeed: 2
   reachDistance: 0.15
   loop: 1
-  arenaSpawnPoint: {fileID: 1605836648}
+  arenaSpawnPoint: {fileID: 208073727}
   departmentProduct: {fileID: 303920169}
 --- !u!1 &310002704
 GameObject:
@@ -13259,7 +13259,7 @@ MonoBehaviour:
   moveSpeed: 2
   reachDistance: 0.15
   loop: 1
-  arenaSpawnPoint: {fileID: 1324873682}
+  arenaSpawnPoint: {fileID: 208073727}
   departmentProduct: {fileID: 472833428}
 --- !u!65 &472833431
 BoxCollider:
@@ -15312,7 +15312,7 @@ MonoBehaviour:
   moveSpeed: 2
   reachDistance: 0.15
   loop: 1
-  arenaSpawnPoint: {fileID: 1757998367}
+  arenaSpawnPoint: {fileID: 208073727}
   departmentProduct: {fileID: 514239716}
 --- !u!1001 &531603273
 PrefabInstance:
@@ -15826,6 +15826,70 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2155829677514246610, guid: 6f05b6d1aa9e72f4f81f368e54dbc8d1, type: 3}
   m_PrefabInstance: {fileID: 541785853}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &544383563
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.7918797
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.000000087159094
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.722834
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      propertyPath: m_Name
+      value: 1_idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2664098864995057252, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8918ce8ec3c53554baaf58ca491d3966, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 561386956}
+  m_SourcePrefab: {fileID: 100100000, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
 --- !u!1 &544452280
 GameObject:
   m_ObjectHideFlags: 0
@@ -16682,6 +16746,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7355de7549512514db6a806b1ce0b2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ForceGPUInstancing
+--- !u!1 &561386955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 79ce92a9b7f8eb14782cfe26bab46f3a, type: 3}
+  m_PrefabInstance: {fileID: 544383563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &561386956
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561386955}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 58d6a5b54b9e5394bbf237708e8fadd5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &563723600
 GameObject:
   m_ObjectHideFlags: 0
@@ -22648,7 +22739,7 @@ MonoBehaviour:
   moveSpeed: 2
   reachDistance: 0.15
   loop: 1
-  arenaSpawnPoint: {fileID: 136695808}
+  arenaSpawnPoint: {fileID: 208073727}
   departmentProduct: {fileID: 731293991}
 --- !u!1 &734451245
 GameObject:
@@ -24259,7 +24350,7 @@ MonoBehaviour:
   moveSpeed: 2
   reachDistance: 0.15
   loop: 1
-  arenaSpawnPoint: {fileID: 1764273665}
+  arenaSpawnPoint: {fileID: 208073727}
   departmentProduct: {fileID: 757392598}
 --- !u!65 &757392601
 BoxCollider:
@@ -41797,7 +41888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323458d3e0ca4bf18711ad1340a1c3ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI.TimerUI
-  timer: {fileID: 0}
+  timer: {fileID: 1720456734}
   timerText: {fileID: 1658566749}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   dangerColor: {r: 1, g: 0, b: 0, a: 1}
@@ -41818,7 +41909,7 @@ MonoBehaviour:
   titleText: {fileID: 44721767}
   statsText: {fileID: 827629526}
   reasonText: {fileID: 1480139176}
-  timer: {fileID: 0}
+  timer: {fileID: 1720456734}
 --- !u!114 &1369201218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48764,7 +48855,7 @@ MonoBehaviour:
   moveSpeed: 2
   reachDistance: 0.15
   loop: 1
-  arenaSpawnPoint: {fileID: 855259565}
+  arenaSpawnPoint: {fileID: 208073727}
   departmentProduct: {fileID: 1637844678}
 --- !u!65 &1637844681
 BoxCollider:
@@ -56107,7 +56198,7 @@ MonoBehaviour:
   moveSpeed: 2
   reachDistance: 0.15
   loop: 1
-  arenaSpawnPoint: {fileID: 91475422}
+  arenaSpawnPoint: {fileID: 208073727}
   departmentProduct: {fileID: 1832643605}
 --- !u!65 &1832643608
 BoxCollider:
@@ -58756,7 +58847,7 @@ MonoBehaviour:
   moveSpeed: 2
   reachDistance: 0.15
   loop: 1
-  arenaSpawnPoint: {fileID: 642417206}
+  arenaSpawnPoint: {fileID: 208073727}
   departmentProduct: {fileID: 1898763695}
 --- !u!1 &1906408097
 GameObject:
@@ -63536,7 +63627,7 @@ MonoBehaviour:
   moveSpeed: 2
   reachDistance: 0.15
   loop: 1
-  arenaSpawnPoint: {fileID: 332576387}
+  arenaSpawnPoint: {fileID: 208073727}
   departmentProduct: {fileID: 2074984381}
 --- !u!65 &2074984384
 BoxCollider:
@@ -63948,7 +64039,7 @@ GameObject:
   - component: {fileID: 2093143404}
   m_Layer: 0
   m_Name: Seller
-  m_TagString: Untagged
+  m_TagString: Seller
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68042,3 +68133,4 @@ SceneRoots:
   - {fileID: 1257750984284436918}
   - {fileID: 1027719058962690674}
   - {fileID: 1369201225}
+  - {fileID: 544383563}

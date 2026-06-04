@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1588839274473502917}
   - component: {fileID: 3962636855773152790}
   - component: {fileID: -1592192593933231301}
-  - component: {fileID: 1688562008840718993}
   - component: {fileID: -275088583972041260}
+  - component: {fileID: 4824120671307257224}
   m_Layer: 0
   m_Name: Projectile_bottle_glass_green
   m_TagString: Untagged
@@ -133,8 +133,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1688562008840718993
-MeshCollider:
+--- !u!114 &-275088583972041260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5731033002757011461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c148706e8f27410388e90c5e5710bf0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Minigames.Throwing.Projectile
+--- !u!135 &4824120671307257224
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -151,19 +163,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2529273631069456936, guid: 5223ebd56afc787498b7adfe9dcd07cc, type: 3}
---- !u!114 &-275088583972041260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5731033002757011461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c148706e8f27410388e90c5e5710bf0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Minigames.Throwing.Projectile
+  serializedVersion: 3
+  m_Radius: 1.7266223
+  m_Center: {x: 0, y: 1.7113016, z: 0}

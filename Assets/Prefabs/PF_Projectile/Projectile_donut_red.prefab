@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5316102364859236426}
   - component: {fileID: 6878543162823574917}
   - component: {fileID: 8080080499334280539}
-  - component: {fileID: -596070308027022105}
   - component: {fileID: -8954808063021916050}
+  - component: {fileID: -178505689098343567}
   m_Layer: 0
   m_Name: Projectile_donut_red
   m_TagString: Untagged
@@ -133,8 +133,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &-596070308027022105
-MeshCollider:
+--- !u!114 &-8954808063021916050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7253298302694123796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c148706e8f27410388e90c5e5710bf0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Minigames.Throwing.Projectile
+--- !u!135 &-178505689098343567
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -151,19 +163,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6407329691561915002, guid: 7f37f00eb8ba84949b02ade55a683807, type: 3}
---- !u!114 &-8954808063021916050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7253298302694123796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c148706e8f27410388e90c5e5710bf0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Minigames.Throwing.Projectile
+  serializedVersion: 3
+  m_Radius: 0.4689868
+  m_Center: {x: -0.00000029802322, y: 0.17157373, z: 0.0000012367964}

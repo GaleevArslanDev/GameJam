@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8492036387458863327}
   - component: {fileID: 2265347639149811463}
   - component: {fileID: 4548735853463025486}
-  - component: {fileID: 7326358171383097178}
   - component: {fileID: -7545176664407695625}
+  - component: {fileID: -805415676440270952}
   m_Layer: 0
   m_Name: Projectile_ChocolateBar
   m_TagString: Untagged
@@ -120,8 +120,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &7326358171383097178
-MeshCollider:
+--- !u!114 &-7545176664407695625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7173065458075834209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c148706e8f27410388e90c5e5710bf0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Minigames.Throwing.Projectile
+--- !u!135 &-805415676440270952
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -138,19 +150,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6731052039867771193, guid: 21bd281347300ca4ba2a46bf7aedc61c, type: 3}
---- !u!114 &-7545176664407695625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7173065458075834209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c148706e8f27410388e90c5e5710bf0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Minigames.Throwing.Projectile
+  serializedVersion: 3
+  m_Radius: 0.13806905
+  m_Center: {x: 0, y: 0.010766333, z: 0}

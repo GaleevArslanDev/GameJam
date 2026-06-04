@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3588558903594281666}
   - component: {fileID: 6750446372899806409}
   - component: {fileID: 7238708712514930387}
-  - component: {fileID: 1697968706486017417}
   - component: {fileID: -1620096618594091215}
+  - component: {fileID: -6167747796374053722}
   m_Layer: 0
   m_Name: Projectile_apple
   m_TagString: Untagged
@@ -120,8 +120,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &1697968706486017417
-MeshCollider:
+--- !u!114 &-1620096618594091215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4771479405953594038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c148706e8f27410388e90c5e5710bf0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Minigames.Throwing.Projectile
+--- !u!135 &-6167747796374053722
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -138,19 +150,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6467029899422433339, guid: b73780788ae5bdc4491b5d1d25c077ff, type: 3}
---- !u!114 &-1620096618594091215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4771479405953594038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c148706e8f27410388e90c5e5710bf0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Minigames.Throwing.Projectile
+  serializedVersion: 3
+  m_Radius: 0.4136608
+  m_Center: {x: 0, y: 0.4136608, z: 0}
