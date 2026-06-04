@@ -17,4 +17,4 @@ MonoBehaviour:
   DepartmentPrefab: {fileID: 2383870639220638397, guid: 8c05e79e1034461438b9a7b5abbcbf14, type: 3}
   ThrowProjectilePrefab: {fileID: 102057865630125702, guid: bff1d7ea79c00f049aecb0f93c9953b0, type: 3}
   HookTargetPrefab: {fileID: 102057865630125702, guid: cbfabd7f59c068d4f924ac1a12a09257, type: 3}
-  SellerVisualPrefab: {fileID: 7577246230265102952, guid: 7a4b3c87bef42594593100c2a876a28e, type: 3}
+  SellerVisualPrefab: {fileID: 7752198813933650603, guid: 7c3f6aa2db28a3b4aa551788cc6bd696, type: 3}

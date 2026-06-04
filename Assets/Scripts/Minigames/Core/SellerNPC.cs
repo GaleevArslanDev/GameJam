@@ -53,7 +53,7 @@ namespace Minigames.Core
                 target.position,
                 moveSpeed * Time.deltaTime
             );
-
+            transform.LookAt(target);
             if (Vector3.Distance(transform.position, target.position) <= reachDistance)
             {
                 currentPointIndex++;
