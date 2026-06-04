@@ -46,8 +46,10 @@ namespace Minigames.Core
 
             Transform target = patrolPoints[currentPointIndex];
 
-            transform.position = Vector3.MoveTowards(
+            transform.position = Vector3.MoveTowards
+            (
                 transform.position,
+               
                 target.position,
                 moveSpeed * Time.deltaTime
             );
